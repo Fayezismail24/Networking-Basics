@@ -7,10 +7,6 @@ It is designed to demonstrate hands-on skills in network configuration, troubles
 
 Cisco Packet Tracer – Lab simulations for routers, switches, and VLANs
 
-GNS3 (optional) – Advanced routing and network simulations
-
-Windows & Linux – For testing network connectivity and services
-
 Visual Studio Code / Markdown – Documentation and notes
 
 
