@@ -17,19 +17,24 @@ This is the most basic `nmap` scan to detect open ports on a target.
 
 `nmap -sn 192.168.1.0/24`
 
+## 4. Show all Host IP
 
-## 4. Scan Multiple Port(s)
+ `nmap -sn [Network/Subnet] | grep "Nmap scan report" | cut -d " " -f 5` 
+
+
+
+## 5. Scan Multiple Port(s)
 
 `nmap -p 22,80,443 <target_ip>`
 
-## 5.Scan all 65535 ports of the target
+## 6.Scan all 65535 ports of the target
 `nmap -p- <target_ip>`
 
-## 6. Service Version Detection
+## 7. Service Version Detection
 
 `nmap -sV <target_ip>`
 
-## 7. Operating System Detection
+## 8. Operating System Detection
 `nmap -O <target_ip>`
 
 
