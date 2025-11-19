@@ -46,6 +46,22 @@ This is the most basic `nmap` scan to detect open ports on a target.
 
 
 
+## 8. Scan top 100 Ports 
+`nmap --top-ports 100    <target_ip>`
+
+`nmap --top-ports 100    147.161.218.12`
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
