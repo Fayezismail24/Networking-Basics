@@ -14,6 +14,8 @@ It is designed to demonstrate hands-on skills in network configuration, troubles
 
 🧪  Labs
 
+
+
 📘 VLAN creation and inter-VLAN routing
 
 🔧 SIP subnetting exercises
