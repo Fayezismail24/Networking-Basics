@@ -5,13 +5,13 @@ This is the most basic `nmap` scan to detect open ports on a target.
 
 `nmap <target_ip>`
 
-## 2. Scan Multiple IPs or a Range of IPs ( Ping )
+## 2. Scan Multiple IPs or a Range of IPs ( 
 
 `nmap 192.168.1.1 192.168.1.2`
 
 `nmap 192.168.1.1-50`
 
-## 3. Scan All Hosts on a Network (Ping )
+## 3. [Scan no ports] All Hosts on a Network 
 
 `nmap -sn [Network/Subnet]`
 
