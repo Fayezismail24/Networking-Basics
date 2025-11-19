@@ -7,6 +7,8 @@ It is designed to demonstrate hands-on skills in network configuration, troubles
 
 Cisco Packet Tracer – Lab simulations for routers, switches, and VLANs
 
+Nmap – Network scanning, host discovery, and security assessment
+
 Visual Studio Code / Markdown – Documentation and notes
 
 
