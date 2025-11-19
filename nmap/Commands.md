@@ -1,4 +1,4 @@
-# Nmap Commands
+# 📂Nmap Commands
 
 ## 1. Basic Scan with Ports 
 This is the most basic `nmap` scan to detect open ports on a target.
