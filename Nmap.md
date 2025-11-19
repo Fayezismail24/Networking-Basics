@@ -1,17 +1,17 @@
 # Nmap Commands
 
-## 1. Basic Scan
+## 1. Basic Scan with Ports 
 This is the most basic `nmap` scan to detect open ports on a target.
 
 `nmap <target_ip>`
 
-## 2. Scan Multiple IPs or a Range of IPs
+## 2. Scan Multiple IPs or a Range of IPs ( Ping )
 
 `nmap 192.168.1.1 192.168.1.2`
 
 `nmap 192.168.1.1-50`
 
-## 3. Scan All Hosts on a Network
+## 3. Scan All Hosts on a Network (Ping )
 
 `nmap -sn [Network/Subnet]`
 
