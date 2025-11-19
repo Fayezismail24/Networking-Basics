@@ -5,20 +5,20 @@ It is designed to demonstrate hands-on skills in network configuration, troubles
 
 🛠 Tools Used
 
-Cisco Packet Tracer – Lab simulations for routers, switches, and VLANs
+🖧Cisco Packet Tracer – Lab simulations for routers, switches, and VLANs
 
-Nmap – Network scanning, host discovery, and security assessment
+🕵️Nmap – Network scanning, host discovery, and security assessment
 
-Visual Studio Code / Markdown – Documentation and notes
+📝Visual Studio Code / Markdown – Documentation and notes
 
 
 🧪  Labs
 
-VLAN creation and inter-VLAN routing
+📘 VLAN creation and inter-VLAN routing
 
-IP subnetting exercises
+🔧 SIP subnetting exercises
 
-Switch and router configuration
+🌐Switch and router configuration
 
-DHCP and DNS server setup
+🛜DHCP and DNS server setup
 
