@@ -82,3 +82,21 @@
 - **Command**: `show interface [interface_name]`
 - Example: `show interface GigabitEthernet0/1`
 - **Purpose**: Displays detailed statistics and status of a specific interface (including errors, traffic, etc.).
+
+## 4. **Vlan  Configuration**
+
+
+### 4.1 **Creating VLANs**
+
+Switch> `enable`
+
+Switch# `configure terminal`
+
+Switch(config)# `vlan 10`
+
+Switch(config-vlan)# `name Sales`
+
+Switch(config-vlan)# `exit`
+
+
+
