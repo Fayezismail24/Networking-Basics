@@ -16,12 +16,26 @@ Switch(config-line)#login
 
 
 ### Privileged EXEC Access Control:
-- **Refers to**: Used to set a password for accessing privileged EXEC mode (global configuration mode). It secures the level of access required for performing advanced configuration tasks on the device.
-- **Purpose**: Protects access to higher privilege levels and ensures that only authorized users can execute sensitive or configuration commands.
+- **Refer to**: Used to set a password for accessing privileged EXEC mode (global configuration mode). It secures the level of access required for performing advanced configuration tasks on the device.
+- **Purpose**: Protects access to higher privilege levels and ensures that only authorized users can execute sensitive or configuration commands
 ```javascript
 Switch(config)#enable secret [Enter Secret Here]
 
 ```
+
+
+### Encrypt all Password:
+- **Refer to**: This command enables the encryption of all plaintext passwords in the configuration file. It is used to secure passwords, ensuring that they are not visible in clear text when viewing the configuration
+- ```javascript
+  Switch(config)# service password-encryption
+  ```
+   
+
+
+
+
+
+
 
 
 
