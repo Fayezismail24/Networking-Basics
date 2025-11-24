@@ -4,7 +4,7 @@
 This repository contains a basic configuration for **Inter-VLAN Routing** using the **Router-on-a-Stick** method. The configuration facilitates routing between two VLANs (VLAN 10 and VLAN 20) through a single physical interface on a router. The setup demonstrates a typical small network scenario where multiple VLANs are configured on a switch, and routing is provided by a router using subinterfaces.
 
 ## Network Diagram
-![Network Diagram](./path/to/your/diagram.png)
+
 
 ### Devices Used:
 - **Router (Router0)**: Performs the inter-VLAN routing via Router-on-a-Stick configuration.
