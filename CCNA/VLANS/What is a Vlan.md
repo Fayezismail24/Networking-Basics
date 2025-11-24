@@ -72,7 +72,30 @@ Imagine a company with three departments: HR, IT, and Finance. Without VLANs, al
 - **VLAN 20 (IT)**: Contains all devices from the Information Technology department
 - **VLAN 30 (Finance)**: Contains all devices from the Finance department
 
-Each department can communicate with its own devices within its VLAN but cannot directly communicate with devices in another VLAN unless routed through a Layer 3 device.
+Each department can communicate with its own devices within its VLAN but cannot directly communicate with devices in another VLAN unless routed through a Layer 3 device
+
+
+## Types of VLANs
+
+- **Data VLAN**: The most common type of VLAN used for carrying user data
+- **Voice VLAN**: Specifically designed to carry voice traffic, such as from IP phones, ensuring QoS and low latency
+- **Management VLAN**: Used for network management traffic, such as communication with switches or routers for configuration purposes
+
+- 
+                                                                `(USUALLY Set VLAN1 as the Management VLAN)`
+  
+
+
+- **Native VLAN**: The default VLAN for untagged traffic. In 802.1Q VLAN tagging, untagged frames are assigned to the native VLAN  (USUALLY SET VLAN99   AS THE NATIVE  VLAN)
+
+- 
+                                                                 `(USUALLY SET VLAN99   AS THE NATIVE  VLAN)`
+
+ 
+- **Default VLAN**: The VLAN that all ports are assigned to by default (usually VLAN 1)
+- **Private VLAN (PVLAN)**: Used to isolate traffic within the same VLAN while allowing communication with specific devices (commonly used in service provider networks)
+- **Dynamic VLAN**: VLANs assigned automatically based on criteria such as MAC addresses or authentication methods
+
 
 ## Conclusion
 
