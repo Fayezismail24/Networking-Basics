@@ -40,7 +40,17 @@ Switch(config)#enable secret [Enter Secret Here]
   <img width="297" height="171" alt="image" src="https://github.com/user-attachments/assets/b8a2dea8-2883-4531-b86b-cc2e28bb1765" />
 
 
+
+
+
+
+  ### Banner MOTD:
+  - **Refer to**:   The banner motd command in Cisco IOS is used to set the Message of the Day (MOTD) banner that is displayed to users when they log into a device, such as a router or switch.
+- ```javascript
   
+  Switch(config)#banner  motd #Enter THe MOTD HERE   #
+  ```
+
 
    
 
