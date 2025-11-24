@@ -12,6 +12,9 @@ Switch(config)#line console 0
 Switch(config-line)#password [Enter Password Here]
 Switch(config-line)#login
 ```
+
+<img width="813" height="665" alt="image" src="https://github.com/user-attachments/assets/aeca8acf-fdd7-4d88-97a9-dcdeaf243032" />
+
 ---------------------------------
 
 
