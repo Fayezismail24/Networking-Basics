@@ -10,3 +10,6 @@ This document outlines the configuration steps required for setting up VLANs on 
 4. **Creating subinterfaces on the router** to enable inter-VLAN routing
 
 The resulting configuration will enable communication between devices on different VLANs by routing traffic through the router
+
+<img width="1050" height="791" alt="image" src="https://github.com/user-attachments/assets/238f46c2-3323-4771-b0e6-d7963f0b9817" />
+
