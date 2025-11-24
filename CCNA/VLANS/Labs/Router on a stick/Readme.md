@@ -7,14 +7,14 @@ This repository contains a basic configuration for **Inter-VLAN Routing** using 
 
 
 ### Devices Used:
-- **Router (Router0)**: Performs the inter-VLAN routing via Router-on-a-Stick configuration.
-- **Switch (Switch0)**: Switch configured with multiple VLANs.
-- **PC0**: A computer in VLAN 10 (IP: 192.168.1.1/24).
-- **PC1**: A computer in VLAN 20 (IP: 192.168.2.1/24).
+- **Router (Router0)**: Performs the inter-VLAN routing via Router-on-a-Stick configuration
+- **Switch (Switch0)**: Switch configured with multiple VLANs
+- **PC0**: A computer in VLAN 10 (IP: 192.168.1.1/24)
+- **PC1**: A computer in VLAN 20 (IP: 192.168.2.1/24)
 
 ## VLANs Configuration
-- **VLAN 10**: Assigned to PC0 with subnet `192.168.1.0/24`.
-- **VLAN 20**: Assigned to PC1 with subnet `192.168.2.0/24`.
+- **VLAN 10**: Assigned to PC0 with subnet `192.168.1.0/24`
+- **VLAN 20**: Assigned to PC1 with subnet `192.168.2.0/24`
 
 ## Router-on-a-Stick Configuration
 
@@ -63,8 +63,8 @@ The router uses a single physical interface (`GigabitEthernet0/1`) to route betw
 ## Verification
 
 1. **Ping Test**:
-    - From **PC0**, ping **PC1** (192.168.2.1).
-    - From **PC1**, ping **PC0** (192.168.1.1).
+    - From **PC0**, ping **PC1** (192.168.2.1)
+    - From **PC1**, ping **PC0** (192.168.1.1)
    
 2. **Show Commands**:
     - On the router, verify the subinterface configurations:
@@ -79,7 +79,7 @@ The router uses a single physical interface (`GigabitEthernet0/1`) to route betw
       ```
 
 ## Conclusion
-This setup demonstrates basic **Router-on-a-Stick** routing between two VLANs, which allows devices in different VLANs to communicate. This configuration is ideal for small to medium-sized networks where a dedicated Layer 3 switch is not available.
+This setup demonstrates basic **Router-on-a-Stick** routing between two VLANs, which allows devices in different VLANs to communicate. This configuration is ideal for small to medium-sized networks where a dedicated Layer 3 switch is not available
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is for **educational purposes** only. It serves as a personal reference for revisiting CCNA topics when needed
