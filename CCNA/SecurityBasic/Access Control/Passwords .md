@@ -34,6 +34,14 @@ Switch(config)#enable secret [Enter Secret Here]
 - ```javascript
   Switch(config)# service password-encryption
   ```
+
+
+  <img width="207" height="170" alt="image" src="https://github.com/user-attachments/assets/06e7ba80-e6f6-498d-8a0b-d52325b7a2bf" />
+  <img width="297" height="171" alt="image" src="https://github.com/user-attachments/assets/b8a2dea8-2883-4531-b86b-cc2e28bb1765" />
+
+
+  
+
    
 
 
