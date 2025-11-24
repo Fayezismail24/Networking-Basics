@@ -13,7 +13,7 @@ Switch(config-line)#password [Enter Password Here]
 Switch(config-line)#login
 ```
 
-<img width="813" height="665" alt="image" src="https://github.com/user-attachments/assets/aeca8acf-fdd7-4d88-97a9-dcdeaf243032" />
+<img width="221" height="102" alt="image" src="https://github.com/user-attachments/assets/4145207b-979c-4d29-9343-e99d37645966" />
 
 ---------------------------------
 
@@ -25,6 +25,8 @@ Switch(config-line)#login
 Switch(config)#enable secret [Enter Secret Here]
 
 ```
+<img width="92" height="34" alt="image" src="https://github.com/user-attachments/assets/685aea02-6e4b-4300-96d2-1f83cff6c599" />
+
 
 
 ### Encrypt all Password:
