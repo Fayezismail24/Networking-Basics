@@ -11,5 +11,5 @@ This document outlines the configuration steps required for setting up VLANs on 
 
 The resulting configuration will enable communication between devices on different VLANs by routing traffic through the router
 
-<img width="1050" height="791" alt="image" src="https://github.com/user-attachments/assets/238f46c2-3323-4771-b0e6-d7963f0b9817" />
+<img width="760" height="451" alt="image" src="https://github.com/user-attachments/assets/3f81e59d-0383-43f4-8752-401ef6e3b657" />
 
