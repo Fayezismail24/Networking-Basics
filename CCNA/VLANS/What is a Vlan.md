@@ -82,14 +82,14 @@ Each department can communicate with its own devices within its VLAN but cannot 
 - **Management VLAN**: Used for network management traffic, such as communication with switches or routers for configuration purposes
 
 - 
-                                                                `(USUALLY Set VLAN1 as the Management VLAN)`
+                                                                USUALLY Set VLAN1 as the Management VLAN
   
 
 
 - **Native VLAN**: The default VLAN for untagged traffic. In 802.1Q VLAN tagging, untagged frames are assigned to the native VLAN  (USUALLY SET VLAN99   AS THE NATIVE  VLAN)
 
 - 
-                                                                 `(USUALLY SET VLAN99   AS THE NATIVE  VLAN)`
+                                                                 USUALLY SET VLAN99   AS THE NATIVE  VLAN
 
  
 - **Default VLAN**: The VLAN that all ports are assigned to by default (usually VLAN 1)
