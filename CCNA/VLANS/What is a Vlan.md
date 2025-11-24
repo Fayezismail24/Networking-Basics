@@ -100,3 +100,42 @@ Each department can communicate with its own devices within its VLAN but cannot 
 ## Conclusion
 
 In summary, VLANs offer powerful benefits in network design, security, performance, and management. By logically segmenting a network, VLANs make it easier to scale, secure, and optimize network resources, making them an essential part of modern networking.
+
+--------------------------------------------------------
+
+
+<img width="1919" height="970" alt="image" src="https://github.com/user-attachments/assets/f204e897-33f4-4640-a0ce-80a1a685fe76" />
+
+# Comparison of IEEE 802.3 and IEEE 802.1Q Ethernet Frames
+
+The following explains the differences between a standard **IEEE 802.3 Ethernet Frame** and an **IEEE 802.1Q Ethernet Frame**, with an emphasis on the inclusion of the **VLAN tag** in 802.1Q.
+
+## 1. IEEE 802.3 Ethernet Frame
+
+- **Destination Address (6 bytes)**: The MAC address of the destination device.
+- **Source Address (6 bytes)**: The MAC address of the source device
+- **Type (2 bytes)**: Specifies the protocol type (e.g., IPv4, IPv6). In IEEE 802.3, this indicates the higher-level protocol encapsulated in the data
+- **Data (46 to 1500 bytes)**: The payload or actual data being transmitted. This could be IP data or other types of information
+- **FCS (Frame Check Sequence - 4 bytes)**: A checksum used to detect errors in the transmission
+
+The IEEE 802.3 frame is the basic Ethernet frame format, typically used in non-VLAN networks. It simply carries data from one device to another
+
+## 2. IEEE 802.1Q Ethernet Frame
+
+- **Destination Address (6 bytes)**: The MAC address of the destination device.
+- **Source Address (6 bytes)**: The MAC address of the source device.
+- **Tag (4 bytes)**: The key difference between 802.3 and 802.1Q. The tag is used to mark the VLAN the frame belongs to. The 4-byte tag includes:
+  - **Priority (3 bits)**: Used for Quality of Service (QoS) to prioritize certain types of traffic
+  - **CFI (Canonical Format Indicator - 1 bit)**: A flag used for compatibility with older systems
+  - **VLAN ID (12 bits)**: Specifies the VLAN the frame belongs to, allowing multiple virtual networks on the same physical infrastructure
+- **Type (2 bytes)**: Like the 802.3 frame, this field indicates the protocol used in the data portion
+- **Data (46 to 1500 bytes)**: The actual data being carried
+- **FCS (Frame Check Sequence - 4 bytes)**: A checksum to verify the integrity of the frame
+
+## Key Differences
+
+1. **VLAN Tagging**: The major addition in the **802.1Q** frame is the **VLAN Tag** (4 bytes), inserted between the source MAC address and the type field. This tag allows the Ethernet frame to carry information about which VLAN the packet belongs to
+
+2. **VLAN Identification (VLAN ID)**: The **VLAN ID** field in the tag enables the differentiation between different VLANs over the same physical network infrastructure
+
+
