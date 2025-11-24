@@ -122,7 +122,7 @@ The IEEE 802.3 frame is the basic Ethernet frame format, typically used in non-V
 
 ## 2. IEEE 802.1Q Ethernet Frame
 
-- **Destination Address (6 bytes)**: The MAC address of the destination device.
+- **Destination Address (6 bytes)**: The MAC address of the destination device
 - **Source Address (6 bytes)**: The MAC address of the source device.
 - **Tag (4 bytes)**: The key difference between 802.3 and 802.1Q. The tag is used to mark the VLAN the frame belongs to. The 4-byte tag includes:
   - **Priority (3 bits)**: Used for Quality of Service (QoS) to prioritize certain types of traffic
