@@ -1,6 +1,6 @@
 Switch Configuration 
 
-### **1.1 Create VLANs**
+1. Create VLANs
 
 SW(config)#vlan 10
 SW(config-vlan)#name IT
@@ -9,9 +9,9 @@ SW(config)#vlan 20
 SW(config-vlan)#name HR
 SW(config-vlan)#do wr
 SW(config-vlan)#exit 
----
 
-###**Verify VLANs:**
+
+2.Verify VLANs:
 
 SW#show vlan brief // To see if the VLANS  Created Succesfully 
 VLAN Name                             Status    Ports
@@ -30,7 +30,8 @@ VLAN Name                             Status    Ports
 1004 fddinet-default                  active    
 1005 trnet-default                    active    
 ---
-1.2 Assign VLANs to Ports
+
+3.Assign VLANs to Ports
 
 SW(config)#interface fastEthernet 0/1
 SW(config-if)#switchport mode access 
@@ -44,7 +45,8 @@ Building configuration...
 [OK]
 SW(config-if)#exit
 
-Verify Port VLAN Assignment:
+4.Verify Port VLAN Assignment:
+
 SW(config)#SW#show vlan brief 
 
 VLAN Name                             Status    Ports
@@ -63,7 +65,7 @@ VLAN Name                             Status    Ports
 1005 trnet-default                    active    
 
 
-1.3 Configure Trunk Port to Router
+6. Configure Trunk Port to Router
 SW(config)#interface gigabitEthernet 0/1
 SW(config-if)#switchport mode trunk 
 
@@ -71,7 +73,8 @@ SW(config-if)#switchport mode trunk
 
 
 Router Configuration : 
-###**2.3 Configure Subinterfaces for VLANs:**
+
+6.Configure Subinterfaces for VLANs:
 
 Router>en
 Router#config t
@@ -96,4 +99,5 @@ Building configuration...
 Router(config-subif)#exit
 
 Router(config)#
+
 
