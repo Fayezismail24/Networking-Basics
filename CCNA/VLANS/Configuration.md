@@ -13,5 +13,17 @@ Switch(config-vlan)# `name Sales`
 
 Switch(config-vlan)# `exit`
 
+Switch(config)#interface `fastEthernet 0/1`
+
+Switch(config-if)#switchport mode `access` 
+
+Switch(config-if)#switchport access `vlan 100`
+
+
+
+
+
+
+
 
 
