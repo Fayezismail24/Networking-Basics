@@ -19,12 +19,12 @@ The resulting configuration will enable communication between devices on differe
 
 ## 1. What is Router-on-a-Stick?
 
-- A setup where a **single physical router interface** is used to route traffic between **multiple VLANs** on a network.
-- The router interface is divided into **subinterfaces**, each assigned to a VLAN.
-- Traffic from VLANs goes to the router via a **trunk link**, the router routes it, then sends it back.
+- A setup where a **single physical router interface** is used to route traffic between **multiple VLANs** on a network
+- The router interface is divided into **subinterfaces**, each assigned to a VLAN
+- Traffic from VLANs goes to the router via a **trunk link**, the router routes it, then sends it back
 
 ## 2. Key Points
 
-- Only **one physical router interface** is needed for multiple VLANs.
-- Requires **trunking** between the switch and the router.
-- Slower than a **Layer 3 switch** for large networks because all traffic goes through the router’s single interface.
+- Only **one physical router interface** is needed for multiple VLANs
+- Requires **trunking** between the switch and the router
+- Slower than a **Layer 3 switch** for large networks because all traffic goes through the router’s single interface
