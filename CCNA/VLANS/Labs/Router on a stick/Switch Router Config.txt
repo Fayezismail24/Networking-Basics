@@ -71,7 +71,8 @@ SW(config-if)#switchport mode trunk
 
 
 Router Configuration : 
-2.3 Configure Subinterfaces for VLANs
+###**2.3 Configure Subinterfaces for VLANs:**
+
 Router>en
 Router#config t
 Router(config)#
@@ -95,3 +96,4 @@ Building configuration...
 Router(config-subif)#exit
 
 Router(config)#
+
