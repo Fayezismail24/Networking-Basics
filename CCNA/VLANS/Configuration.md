@@ -14,7 +14,7 @@ Switch(config-vlan)# `name Sales`
 Switch(config-vlan)# `exit`
 
 
-##  **Assign Vlan To Interaface **
+##  **Assign Vlan To Interaface**
 
 Switch(config)#interface `fastEthernet 0/1`
 
