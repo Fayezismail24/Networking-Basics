@@ -1,4 +1,4 @@
-##  1.**Vlan  Configuration**
+##  .**Vlan  Configuration**
 
 
 ###  **Creating VLANs**
@@ -12,6 +12,9 @@ Switch(config)# `vlan 10`
 Switch(config-vlan)# `name Sales`
 
 Switch(config-vlan)# `exit`
+
+
+##  **Assign Vlan To Interaface **
 
 Switch(config)#interface `fastEthernet 0/1`
 
