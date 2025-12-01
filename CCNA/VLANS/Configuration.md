@@ -23,6 +23,8 @@ Switch(config-if)#switchport mode `access`
 Switch(config-if)#switchport access `vlan 100`
 
 **Assign Trunk To Interaface**
+---
+
 Switch(config)#interface `fastEthernet 0/2`
 
 Switch(config-if)# switchport mode `trunk`
