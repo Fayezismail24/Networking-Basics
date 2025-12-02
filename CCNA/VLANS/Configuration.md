@@ -52,6 +52,24 @@ MLS(config)# `ip routing`
 
 
 
+**Router on a Stick**
+---
+
+Router(config)#interface `gigabitEthernet 0/1`
+
+Router(config-subif)`no shutdown`
+
+Router(config)#interface gigabitEthernet `0/1.10`
+
+Router(config-subif)`#encapsulation dot1Q 10`
+
+Router(config-subif)#ip address `192.168.1.1 255.255.255.0`
+
+
+
+
+
+
 
 
 
