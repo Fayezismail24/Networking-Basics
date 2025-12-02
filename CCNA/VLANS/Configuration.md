@@ -1,9 +1,5 @@
-##  **Vlan  Configuration**
-
 
 ###  **Creating VLANs**
----
-
 
 Switch(config)# `vlan 10`
 
@@ -12,7 +8,7 @@ Switch(config-vlan)# `name Sales`
 
 
 ##  **Assign Vlan To Interaface**
----
+
 
 Switch(config)#interface `fastEthernet 0/1`
 
@@ -29,7 +25,6 @@ Switch(config-if)# switchport mode `trunk`
 
 Switch(config-if)# switchport trunk `allowed vlan 10,20`
 
-Switch(config-if)# exit
 
 
 
