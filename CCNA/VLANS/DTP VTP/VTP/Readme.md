@@ -13,6 +13,9 @@ There are three operational modes in VTP:
 - **Client Mode**: A switch in client mode cannot create, modify, or delete VLANs. It can only receive VLAN information from a VTP server and apply it.
 - **Transparent Mode**: A switch in transparent mode will forward VTP advertisements but does not modify its VLAN configuration. It can create, modify, or delete VLANs locally, but these changes will not be propagated to other switches.
 
+  
+<img width="1523" height="465" alt="image" src="https://github.com/user-attachments/assets/88668537-e54c-4ff2-bcc8-a4b1c0c36fe7" />
+
 ### 3. VTP Advertisements
 - VTP sends advertisements between switches to keep VLAN configurations synchronized across the network. These advertisements contain information such as the VLAN ID, name, and configuration revision number.
 - VTP messages are sent periodically to ensure all switches have the most up-to-date VLAN information.
@@ -41,4 +44,6 @@ There are three versions of VTP, with Version 2 and Version 3 providing addition
 
 ## Conclusion:
 VTP is a valuable tool for simplifying VLAN management in large networks by allowing switches to automatically share and synchronize VLAN information. However, it should be used with caution, especially with regard to revision numbers, to avoid unintentional changes to the network.
+
+
 
