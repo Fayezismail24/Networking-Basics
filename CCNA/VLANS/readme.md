@@ -22,7 +22,8 @@ This folder is designed to help learners:
   - Assigning VLANs to access ports  
   - Configuring trunk ports  
   - Native VLAN configuration  
-  - VLAN troubleshooting exercises  
+  - VLAN troubleshooting exercises
+  - Inter Vlan Routing (Legacy - Router on a Stick - Layer 3 Switch )
 
 - **Reference Materials**  
   - VLAN command cheat sheet  
@@ -43,7 +44,7 @@ This folder is designed to help learners:
 ## 📚 Recommended Tools
 
 - **Cisco Packet Tracer** (for simulation)  
-- **GNS3 / EVE-NG** (for advanced labs)  
+- **EVE-NG** (for advanced labs)  
 - **Cisco Switches / Routers** (for real-world practice)  
 
 ---
