@@ -37,6 +37,27 @@ DTP (Dynamic Trunking Protocol) is a Cisco proprietary protocol used to automati
 | **Trunk**               | Forces the port to be a trunk port, regardless of the other device's settings.                     |
 | **Access**              | The port is forced into access mode and will not attempt to negotiate trunking.                    |
 
+<img width="1280" height="149" alt="image" src="https://github.com/user-attachments/assets/8137270d-a42c-4ae5-93bf-90aa6dfe9b3c" />
+<img width="1285" height="149" alt="image" src="https://github.com/user-attachments/assets/1a78d13d-96a0-4933-bd84-97abc4f31d69" />
+<img width="1285" height="149" alt="image" src="https://github.com/user-attachments/assets/3a823573-de69-466f-80df-98732e6ee93e" />
+<img width="1288" height="149" alt="image" src="https://github.com/user-attachments/assets/11b4364f-4091-4729-b714-daffcb18cb15" />
+<img width="1283" height="150" alt="image" src="https://github.com/user-attachments/assets/8e46941a-143f-4f1d-a326-650e5df47ec5" />
+<img width="1282" height="154" alt="image" src="https://github.com/user-attachments/assets/e47410d2-4fe9-4072-ac7f-af6bea7f81fd" />
+<img width="1287" height="149" alt="image" src="https://github.com/user-attachments/assets/99613301-0396-4d43-8b68-7af87d798735" />
+<img width="1284" height="153" alt="image" src="https://github.com/user-attachments/assets/bcd86ffe-8a62-470a-b67c-0e420e45cfc3" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
