@@ -9,7 +9,6 @@ Switch(config)# `vlan 10`
 
 Switch(config-vlan)# `name Sales`
 
-Switch(config-vlan)# `exit`
 
 
 ##  **Assign Vlan To Interaface**
