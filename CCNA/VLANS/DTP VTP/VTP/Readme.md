@@ -16,6 +16,12 @@ There are three operational modes in VTP:
   
 <img width="1523" height="465" alt="image" src="https://github.com/user-attachments/assets/88668537-e54c-4ff2-bcc8-a4b1c0c36fe7" />
 
+<img width="1802" height="627" alt="image" src="https://github.com/user-attachments/assets/d01abed3-deac-4fa8-b961-4a2f68cb3227" />
+
+<img width="1810" height="534" alt="image" src="https://github.com/user-attachments/assets/c2ef97ef-79cb-48fb-b8c8-ee2a7ef494e5" />
+
+
+
 ### 3. VTP Advertisements
 - VTP sends advertisements between switches to keep VLAN configurations synchronized across the network. These advertisements contain information such as the VLAN ID, name, and configuration revision number.
 - VTP messages are sent periodically to ensure all switches have the most up-to-date VLAN information.
