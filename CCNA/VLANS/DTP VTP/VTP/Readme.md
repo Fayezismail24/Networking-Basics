@@ -18,7 +18,7 @@ There are three operational modes in VTP:
 
 <img width="1802" height="627" alt="image" src="https://github.com/user-attachments/assets/d01abed3-deac-4fa8-b961-4a2f68cb3227" />
 
-<img width="1810" height="534" alt="image" src="https://github.com/user-attachments/assets/c2ef97ef-79cb-48fb-b8c8-ee2a7ef494e5" />
+
 
 
 
@@ -29,6 +29,7 @@ There are three operational modes in VTP:
 ### 4. Revision Number
 - Each time a VLAN configuration is modified on a VTP server, the **revision number** increases. Other switches in the VTP domain use this number to determine whether they should accept or reject an advertisement.
 - A higher revision number means the advertised VLAN configuration is more recent.
+- <img width="1810" height="534" alt="image" src="https://github.com/user-attachments/assets/c2ef97ef-79cb-48fb-b8c8-ee2a7ef494e5" />
 
 ### 5. VTP Pruning
 - VTP pruning is a feature that reduces unnecessary broadcast traffic in a network by ensuring that VLAN traffic is only sent to switches that have ports assigned to that VLAN. This can be especially useful in large networks to conserve bandwidth.
