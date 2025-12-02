@@ -38,14 +38,16 @@ Switch(config-if)# exit
 **Layer 3 Switch SVI**
 ---
 
-Switch(config)# `vlan 10`
+MLS(config)# `vlan 10`
 
-Switch(config-vlan)# `name Sales`
+MLS(config-vlan)# `name Sales`
 
 
-Switch(config)#interface `vlan 10`
+MLS(config)#interface `vlan 10`
 
-S1(config-if)#ip address `192.168.10.1 255.255.255.0`
+MLS(config-if)#ip address `192.168.10.1 255.255.255.0`
+
+MLS(config)# `ip routing`
 
 
 
