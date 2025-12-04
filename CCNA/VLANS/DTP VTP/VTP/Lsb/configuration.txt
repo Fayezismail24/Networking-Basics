@@ -1,0 +1,43 @@
+Rememeber make all Limks as Trunk Links 
+
+
+VTP SERVER
+Switch(config)#vtp mode server
+
+Switch(config)#vtp domain CYBERITY
+
+Changing VTP domain name from NULL to CYBERITY
+
+
+Switch(config)#vtp password 123
+
+Setting device VLAN database password to 123
+
+
+Switch(config)#vlan 10
+Switch(config)#vlan 20
+Switch(config)#vlan 30
+Switch(config)#vlan 40
+
+
+VTP Client 
+Switch(config)#vtp mode client
+
+Switch(config)#vtp domain CYBERITY
+
+Switch(config)#vtp password 123
+
+
+VTP Transparent
+Switch(config)#vtp mode Transparent
+Switch(config)#vtp domain CYBERITY
+
+Switch(config)#vtp password 123
+
+
+
+
+
+
+
+
