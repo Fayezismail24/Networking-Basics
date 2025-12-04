@@ -27,5 +27,4 @@ The VTP configuration will be demonstrated in a small network, with switches con
 - **Switch10**: VTP Transparent
 - **Switch11**: VTP Client
 
----
 
