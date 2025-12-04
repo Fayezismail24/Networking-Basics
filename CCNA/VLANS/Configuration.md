@@ -58,9 +58,8 @@ Router(config-subif)`#encapsulation dot1Q 10`
 
 Router(config-subif)#ip address `192.168.1.1 255.255.255.0`
 
-
-
 **Vlan Trunk Protocol (VTP)**
+---
 
 
 
