@@ -61,57 +61,41 @@ Router(config-subif)#ip address `192.168.1.1 255.255.255.0`
 
 
 **Vlan Trunk Protocol (VTP)**
----
 
-`Rememeber make all Limks as Trunk Links`
+
+
+```
+
+
+
+Rememeber make all Limks as Trunk Links
 
 
 VTP SERVER
+
 Switch(config)#`vtp mode server`
-
 Switch(config)#`vtp domain CYBERITY`
-
-
 Switch(config)#vtp password `123`
-
 Setting device VLAN database password to 123
 
 
 
-##Creating VLANS##
+Creating VLANS
 Switch(config)#`vlan 10`
-
 Switch(config)#`vlan 20`
-
 Switch(config)#`vlan 30`
-
 Switch(config)#`vlan 40`
 
 
 VTP Client 
-
-
-
 Switch(config)#vtp `mode `client`
-
 Switch(config)#vtp `domain CYBERITY`
-
 Switch(config)#vtp `password 123`
 
 
 VTP Transparent
-
 Switch(config)#vtp `mode Transparent`  
-
-
 Switch(config)#vtp `domain CYBERITY`
-
 Switch(config)#vtp `password 123`
-
-
-
-
-
-
 
 
