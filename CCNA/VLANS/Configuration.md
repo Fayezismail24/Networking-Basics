@@ -44,6 +44,14 @@ MLS(config)# `ip routing`
 
 
 
+**Native Vlans** 
+---
+S1(config)# interface range `g0/1 - 2`
+
+S1(config-if-range)# switchport trunk `native vlan 999`
+
+
+
 
 **Router on a Stick**
 ---
