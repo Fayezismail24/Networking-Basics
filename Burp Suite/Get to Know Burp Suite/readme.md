@@ -198,14 +198,7 @@ If no authentication:
 
 👉 You can delete anyone.
 
-✔ How Burp Helps
-Task	Burp Tool
-Intercept & view request	Proxy
-Replay and modify	Repeater
-Automate method testing	Intruder
-Check accepted methods	OPTIONS request
-Compare responses	Comparer
-Scan for issues	Scanner (Pro)
+
   
 
 
