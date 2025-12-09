@@ -155,12 +155,19 @@ DELETE /users/23
 
 
 /login     → POST
+
+
 /products  → GET
+
+
 /api/users → GET, POST
+
+
 /admin     → GET, DELETE ❗
 
 
 ✔ Why this matters
+---
 
 Each method can be exploited differently.
 
