@@ -90,7 +90,6 @@ The Target tab provides a **map of the application**, showing everything Burp ha
     ├─ /users
     └─ /orders
 
-    You immediately see:
 
 Hidden admin page
 
