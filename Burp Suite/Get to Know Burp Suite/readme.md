@@ -208,12 +208,14 @@ If no authentication:
 
 Burp history may show:
 
-Path	Status
-/login	200 OK
-/admin	401 Unauthorized
-/secret.txt	404 Not Found
-/backup.zip	200 OK ❗
-/logout	302 Redirect
+| Path         | Status            | Notes                           |
+|-------------|------------------|----------------------------------|
+| /login      | 200 OK           | Page loads normally              |
+| /admin      | 401 Unauthorized | Authentication required          |
+| /secret.txt | 404 Not Found    | File does not exist (or hidden)  |
+| /backup.zip | 200 OK ❗        | Sensitive file exposed           |
+| /logout     | 302 Redirect     | Redirects after logout           |
+
 
 Interesting cases:
 
@@ -222,6 +224,78 @@ Interesting cases:
 /admin gives 401 ⇒ Authentication exists
 
 Status differences help find vulnerabilities.
+
+✔ Why These Matter
+
+/backup.zip → 200 OK
+
+File exists and can be downloaded.
+
+Could contain:
+
+Source code
+
+Database dump
+
+Secrets
+
+⚠️ This is a high-risk information leak.
+
+/admin → 401 Unauthorized
+
+Authentication is enabled.
+
+The endpoint is real.
+
+Next step is:
+
+Brute-force login
+
+Check for IDOR
+
+Test for bypass
+
+Different status codes = different behavior
+
+Attackers look for inconsistencies to find weaknesses:
+
+Example:
+
+/users/1  → 200 OK
+
+/users/2  → 403 Forbidden ❗
+
+
+This suggests:
+
+Access control problem
+
+
+IDOR potential
+
+
+✔ What to Look For
+
+Status Code	Meaning	Security Insight
+
+
+200 OK	Page exists	Could expose sensitive content
+
+
+401 Unauthorized	Needs login	Target for auth bypass
+
+
+403 Forbidden	Access blocked	Often bypassable
+
+
+404 Not Found	File missing	Helps map hidden files
+
+
+302 Redirect	Redirect to login/home	Used for session flow
+
+
+500 Server Error	Internal error	Might expose stack traces
+
   
 
 ✔ Server fingerprints
