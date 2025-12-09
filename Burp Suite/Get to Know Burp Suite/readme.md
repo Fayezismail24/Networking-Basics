@@ -140,6 +140,65 @@ DELETE /users/23
 
 
 …that could allow user deletion if not protected.
+
+| Method      | Purpose                      | Example Request                         | Typical Use                       | Security Risk              | What to Check in Burp                  |
+| ----------- | ---------------------------- | --------------------------------------- | --------------------------------- | -------------------------- | -------------------------------------- |
+| **GET**     | Retrieve data                | `GET /products/1`                       | Viewing pages, fetching info      | Data exposure              | Sensitive info in response, parameters |
+| **POST**    | Submit data to server        | `POST /login`                           | Login forms, upload               | Injection, CSRF            | Inspect body, test payloads            |
+| **PUT**     | Create or replace a resource | `PUT /api/users/23`                     | Update user profile, replace data | Overwrites entire resource | Is auth required? Validation?          |
+| **PATCH**   | Partial update               | `PATCH /api/users/23 {"role": "admin"}` | Edit single field                 | Privilege escalation       | Does app validate fields?              |
+| **DELETE**  | Remove resource              | `DELETE /api/users/23`                  | Delete account, remove record     | **Data loss**, IDOR        | Should require admin-only access       |
+| **OPTIONS** | Ask what methods are allowed | `OPTIONS /admin`                        | Debugging                         | Reveals attack surface     | Check allowed methods returned         |
+| **HEAD**    | GET without body             | `HEAD /page`                            | Testing availability              | Cache tricks               | Does response expose metadata?         |
+| **TRACE**   | Echo received request        | `TRACE /`                               | Debugging                         | Rare but can cause XSS     | Should be disabled                     |
+| **CONNECT** | Tunnel formation             | `CONNECT example.com:443`               | HTTPS proxying                    | SSRF potential             | Normally blocked                       |
+
+
+/login     → POST
+/products  → GET
+/api/users → GET, POST
+/admin     → GET, DELETE ❗
+
+
+✔ Why this matters
+
+Each method can be exploited differently.
+
+🔹 GET Example (Information Leak)
+GET /api/users?role=admin
+
+
+If this returns admin data → bad.
+
+🔹 POST Example (Login)
+POST /login
+username=admin&password=123456
+
+
+Burp can:
+
+Modify
+
+Repeat
+
+Brute-force
+
+🔹 DELETE Example (High Risk!)
+DELETE /users/23
+
+
+If no authentication:
+
+👉 You can delete anyone.
+
+✔ How Burp Helps
+Task	Burp Tool
+Intercept & view request	Proxy
+Replay and modify	Repeater
+Automate method testing	Intruder
+Check accepted methods	OPTIONS request
+Compare responses	Comparer
+Scan for issues	Scanner (Pro)
   
 
 
