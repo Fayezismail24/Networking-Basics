@@ -78,12 +78,121 @@ The Target tab provides a **map of the application**, showing everything Burp ha
 ### What you can analyze
 
 ✔ Directory structure  
+/
+├─ /login
+├─ /register
+├─ /products
+│   ├─ /1
+│   ├─ /2
+│   └─ /3
+├─ /admin
+└─ /api
+    ├─ /users
+    └─ /orders
+
+    You immediately see:
+
+Hidden admin page
+
+Parameterized product IDs: /products/1
+
+Both are attack surfaces
+  
+
+
 ✔ Parameters  
+---
+Captured request:
+
+GET /products?category=shoes&page=2 HTTP/1.1
+Host: localhost:3000
+
+
+Parameters detected:
+
+Parameter	Value
+category	shoes
+page	2
+
+You can test them with:
+
+page=-1
+page=9999
+page=' OR 1=1 --
+category=<script>alert(1)</script>
+  
+
+
+
 ✔ HTTP methods  
+---
+
+Burp shows which methods the server accepts:
+
+URL	Method
+/login	POST
+/products	GET
+/api/users	GET, POST
+/admin	GET, DELETE ❗
+
+If you see something like:
+
+DELETE /users/23
+
+
+…that could allow user deletion if not protected.
+  
+
+
 ✔ Status codes  
+---
+
+
+Burp history may show:
+
+Path	Status
+/login	200 OK
+/admin	401 Unauthorized
+/secret.txt	404 Not Found
+/backup.zip	200 OK ❗
+/logout	302 Redirect
+
+Interesting cases:
+
+/backup.zip returning 200 ⇒ Sensitive file exposed
+
+/admin gives 401 ⇒ Authentication exists
+
+Status differences help find vulnerabilities.
+  
+
 ✔ Server fingerprints
+---
+
+
+Response headers Burp shows:
+
+Server: Apache/2.4.51 (Ubuntu)
+X-Powered-By: PHP/7.4.3
+Set-Cookie: PHPSESSID=abcd1234
+
+
+From this we learn:
+
+Using Apache 2.4.51 ⇒ check CVEs
+
+Backend is PHP
+
+Session cookie is PHPSESSID
+
+A tester might search:
+
+"Apache/2.4.51 exploit"
+"PHP/7.4.3 vulnerabilities"
+
 
 ### Adding to Scope
+---
 
 Scope is important:
 
