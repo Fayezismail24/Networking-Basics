@@ -42,6 +42,14 @@ Router(config)# exit
 Router(config)# write memory
 ```
 
+## Configure Banner MOTD (Message of the Day)
+
+```bash
+Router> enable
+Router# configure terminal
+Router(config)# banner motd # YOUR_BANNER_MESSAGE_HERE #
+Router(config)# exit
+Router(config)# write memory
 
 
 
