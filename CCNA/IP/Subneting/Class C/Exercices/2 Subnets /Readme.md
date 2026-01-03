@@ -1,4 +1,3 @@
-Here is the **fully fixed, clean, and correct version**, properly formatted in **Markdown**, with logical flow, corrected IPs, and no syntax errors. You can copy–paste this as-is 👇
 
 ```markdown
 Consider the following IP address: **192.168.0.1/24**
