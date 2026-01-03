@@ -11,3 +11,9 @@
 - The **remaining 1 octet (8 bits)** denotes the **hosts**.  
   - Total usable hosts per network: 2⁸ − 2 = 254
 
+| Category          | Details        |
+| ----------------- | -------------- |
+| Network ID        | 192.168.1.0    |
+| First Usable Host | 192.168.1.1    |
+| Last Usable Host  | 192.168.1.254  |
+| Broadcast ID      | 192.168.1.255  |
