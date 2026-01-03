@@ -11,6 +11,52 @@
 
 
 
+
+
+
+
+| Category           | Details          |
+|-------------------|-----------------|
+| Network ID        | 10.0.0.0        |
+| First Usable Host | 10.0.0.1        |
+| Last Usable Host  | 10.255.255.254  |
+| Broadcast ID      | 10.255.255.255  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # IP Address Breakdown (Class A)
 
 | Category                     | Details                                      |
