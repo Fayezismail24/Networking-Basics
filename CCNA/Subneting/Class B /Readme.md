@@ -6,7 +6,7 @@
 | End IP      | 191.255.255.255 |                                      |
 
 - The **first two bytes (16 bits)** denote the **network**.  
-  - Total networks: 2¹⁶ = 16,384  
+  - Total networks: 2¹⁶ = 65,534
 
 - The **remaining 2 bytes (16 bits)** denote the **hosts**.  
   - Total hosts per network: 2¹⁶ − 2 = 65,534
