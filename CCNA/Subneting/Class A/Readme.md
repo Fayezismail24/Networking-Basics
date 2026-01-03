@@ -7,7 +7,7 @@
   - Total networks: 2⁸ = 256
 
 - The remaining 3 bytes (24 bits) denote the **hosts**.
-  - Total hosts per network: 2²⁴ = 16,777,216
+  - Total hosts per network: 2²⁴ − 2  = 16,777,214
 
 
 
