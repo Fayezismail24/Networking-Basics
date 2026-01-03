@@ -40,10 +40,10 @@ For 2 subnets: 2^1 = 2
 
 ### New Subnet Mask
 
-Borrowing **1 bit** from the host portion (highlighted in red):
+Borrowing **1 bit** from the host portion (highlighted in red): 11111111.11111111.11111111.<span style="color:red">1</span>0000000
+
 ```
 
-11111111.11111111.11111111.<span style="color:red">1</span>0000000
 
 ```
 
@@ -54,9 +54,5 @@ New subnet mask: /25  →  255.255.255.128
 
 ```
 
-### Result
 
-- **Number of subnets:** 2  
-- **Hosts per subnet:** 2⁷ − 2 = 126
-```
 
