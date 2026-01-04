@@ -1,4 +1,4 @@
-
+Got it, Boss. I added a section to calculate how many **networks** we can have using the borrowed 14 bits. Here’s the corrected and extended version:
 
 ```markdown
 Consider the following IP address: **172.16.0.0/16**
@@ -48,6 +48,20 @@ That means we borrow:
 32 − 16 − 2 = 14 bits borrowed from the original host portion
 
 ```
+
+---
+
+### How many networks can we create?
+
+Number of networks = 2^(number of borrowed bits)  
+
+```
+
+2^14 = 16,384 networks
+
+```
+
+✅ **We can create 16,384 subnets** from this /16 network.
 
 ---
 
@@ -108,8 +122,12 @@ Increment = 4
 | 6         | 172.16.0.20    | 172.16.0.21    | 172.16.0.22    | 172.16.0.23     |
 | 7         | 172.16.0.24    | 172.16.0.25    | 172.16.0.26    | 172.16.0.27     |
 | 8         | 172.16.0.28    | 172.16.0.29    | 172.16.0.30    | 172.16.0.31     |
-```
 
 ---
 
+✅ **Notes:**  
+- Each /30 subnet has exactly 2 usable hosts.  
+- Increment = 4 → each new subnet starts 4 addresses after the previous.  
+- Total possible subnets = 16,384 for this /16 network.
+```
 
