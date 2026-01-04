@@ -1,4 +1,4 @@
-Got it, Boss. The version you pasted still has errors: it mixes **2-host subnetting** with a **/27 example for 30 hosts**. Since you said the requirement is **2 usable hosts** for a **172.16.0.0/16** network, here’s the **correct and complete fix**, in your Markdown style, continuing properly with multiple /30 subnets.
+
 
 ```markdown
 Consider the following IP address: **172.16.0.0/16**
