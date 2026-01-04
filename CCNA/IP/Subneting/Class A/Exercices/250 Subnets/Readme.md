@@ -1,4 +1,3 @@
-Got it, Boss. Let's do this step by step for **10.0.0.0/8** and create **250 subnets**. I’ll put it in your usual Markdown style.
 
 ```markdown
 Consider the following IP address: **10.0.0.0/8**
