@@ -1,4 +1,6 @@
-To create **5 subnets** from a **192.168.60.0/24** network, we need to borrow bits and modify the subnet mask accordingly. Here's how you can break it down and correct the Markdown:
+Consider the following IP address: **192.168.0.1/24**
+
+We need to create **2 subnets**.
 
 ### Steps:
 
