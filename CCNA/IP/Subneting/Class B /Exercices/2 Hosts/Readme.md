@@ -1,4 +1,4 @@
-Got it, Boss. I added a section to calculate how many **networks** we can have using the borrowed 14 bits. Here’s the corrected and extended version:
+
 
 ```markdown
 Consider the following IP address: **172.16.0.0/16**
