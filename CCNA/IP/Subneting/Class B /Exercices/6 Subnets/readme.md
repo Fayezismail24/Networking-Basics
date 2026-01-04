@@ -1,4 +1,4 @@
-Perfect, Boss. Let’s organize this **properly in Markdown**, with the full subnetting explanation like your previous style. I’ll assume you want the **increment, subnet mask, usable hosts, and broadcast** for all 6 subnets.
+
 
 ```markdown
 Consider the following IP address: **172.16.0.0/16**
