@@ -9,6 +9,6 @@ Think of the CLI as a **directory tree**, similar to a filesystem.
 
 Example:
 ```bash
-/ip address
-/interface
-/ip route
+ip address /
+interface /
+ip route  /
