@@ -1,12 +1,12 @@
 
-
-## Minimal MikroTik IP Change (Default IP → New IP + Gateway)
+````md
+# Minimal MikroTik IP Change (Default IP → New IP + Gateway)
 
 ### 1. View existing IP addresses (optional but recommended)
 
 ```bash
 /ip address /print
-```
+````
 
 ---
 
@@ -28,13 +28,26 @@ This IP will be the **default gateway for LAN devices**.
 
 ---
 
+### 4. Set the default gateway for the MikroTik router
+
+Replace `192.168.0.254` with the actual gateway IP of your upstream network (the next hop toward the internet):
+
+```bash
+/ip route /add gateway=192.168.0.254
+```
+
+---
+
 ### Result
 
 * Router LAN IP: `192.168.0.1`
 * Default gateway for clients: `192.168.0.1`
+* MikroTik router default route points to: `192.168.0.254`
 * Default MikroTik subnet fully removed
 
 That’s it.
 No DHCP, no NAT, no firewall. Just **IP + gateway done correctly**.
+
+
 
 
