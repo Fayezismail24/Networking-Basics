@@ -52,5 +52,26 @@ You typically would not use DHCP Client if:
 - The MikroTik is acting only as a **switch or access point**, not as an internet gateway
 
 
+INTERNET
+          |
+          | (Public IP assigned by ISP via DHCP)
+          v
++-----------------------+
+|    MikroTik Router    |
+|                       |
+|  [ WAN Interface ]    | <--- DHCP Client lives here
+|          |            |
+|      [ NAT ]          | <--- Translates Public IP to Local IP
+|          |            |
+|  [ LAN Interface ]    | <--- Often a "Bridge" of ports
++-----------------------+
+          |
+          | (Private IPs: 192.168.1.x)
+          v
+   +------+------+
+   |      |      |
+  [PC]  [Phone] [TV]
+
+
 
 
