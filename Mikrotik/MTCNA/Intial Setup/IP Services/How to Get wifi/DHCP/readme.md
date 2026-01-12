@@ -185,25 +185,4 @@ LAN Clients (DHCP)
 
 Putting a DHCP Client on LAN breaks network logic.
 
----
 
-## Next Steps
-
-* Add NAT (masquerade)
-* Add basic firewall rules
-* Extend to enterprise / hospital topology
-
-```
-
----
-
-## Final verdict 🧠
-- **Concept quality**: 9/10  
-- **Structure**: 9/10  
-- **Markdown correctness before fix**: 5/10  
-- **After fix**: **production-ready**
-
-If you want next, I recommend:
-- Splitting this into **README + WAN.md + LAN.md**
-- Or adding a **NAT.md** right after this one
-```
