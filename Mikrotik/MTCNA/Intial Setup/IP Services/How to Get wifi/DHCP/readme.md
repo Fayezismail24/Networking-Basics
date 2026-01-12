@@ -1,6 +1,6 @@
 
 
-```md
+````md
 # MikroTik Basic WAN + LAN Setup (Bridge, DHCP, DNS)
 
 This guide explains a **clean and correct MikroTik setup** with:
@@ -185,4 +185,16 @@ LAN Clients (DHCP)
 
 Putting a DHCP Client on LAN breaks network logic.
 
+---
+
+## ⚡ Quick Concept “Bucket List” (Exam-Friendly)
+
+* WAN → DHCP Client (gets internet IP)
+* Create LAN Bridge
+* Add interfaces to Bridge (ether2, wlan1, wlan2)
+* Assign IP to Bridge (LAN gateway)
+* LAN → DHCP Server (gives IP to clients)
+* Optional: Enable DNS on LAN
+
+**Logic to remember:** WAN asks → LAN gives
 
