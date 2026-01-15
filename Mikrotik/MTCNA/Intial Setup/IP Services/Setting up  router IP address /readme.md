@@ -1,15 +1,4 @@
-Good question. Here is the **correct way to think about it** when you have **multiple interfaces**. I’ll be direct.
 
----
-
-## Key rule (don’t skip this)
-
-👉 **Only ONE interface should be your WAN (internet-facing).**
-👉 **All LAN interfaces should be bridged together.**
-
-If you don’t separate this clearly, routing and NAT will break.
-
----
 
 ## Case 1: Multiple LAN interfaces (most common)
 
