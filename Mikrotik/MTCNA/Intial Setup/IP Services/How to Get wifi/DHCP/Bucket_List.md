@@ -1,4 +1,4 @@
-⚡ Quick Concept “Bucket List” (Exam-Friendly)
+
 
 1.WAN → DHCP Client (gets internet IP)
 
