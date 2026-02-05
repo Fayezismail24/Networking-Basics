@@ -54,3 +54,8 @@ To upgrade your **MikroTik RouterOS** from the MikroTik website, follow these st
 
 <img width="579" height="37" alt="image" src="https://github.com/user-attachments/assets/cf3d489f-8136-40f1-8dcf-d71131b58a35" />
 
+
+
+<img width="1895" height="913" alt="image" src="https://github.com/user-attachments/assets/3ba584f6-574b-4eb0-a016-07da1c61578f" />
+
+
