@@ -44,5 +44,13 @@ To upgrade your **MikroTik RouterOS** from the MikroTik website, follow these st
 ## Additional Notes:
 - **Backup your configuration** before upgrading, as sometimes upgrades can cause unexpected issues or require resets. Use the **Backup** feature in Winbox or via the CLI:
   ```bash
+
+
+
   /system backup save name=backup_before_upgrade
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/22affa74-90ea-434e-a8b6-b1afe096404a" />
+
+
+<img width="579" height="37" alt="image" src="https://github.com/user-attachments/assets/cf3d489f-8136-40f1-8dcf-d71131b58a35" />
 
