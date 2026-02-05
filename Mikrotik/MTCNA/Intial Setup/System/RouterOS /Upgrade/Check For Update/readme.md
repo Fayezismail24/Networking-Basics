@@ -42,3 +42,6 @@ In the **MikroTik RouterOS** "Check For Updates" window, you can choose from the
 - **Stable:** Regularly updated, stable versions.
 - **Testing:** Beta versions for testing new features.
 - **Development:** Experimental, nightly builds for advanced users or developers.
+
+<img width="1911" height="932" alt="image" src="https://github.com/user-attachments/assets/4c6dc457-dc60-42be-8325-830d1f634be5" />
+
