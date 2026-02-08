@@ -8,6 +8,9 @@ Export is done thru terminal only
 
 Whole or partial configuration can be saved thru export 
 
+
+We have made a full export here 
+
 <img width="525" height="28" alt="image" src="https://github.com/user-attachments/assets/37aa80ca-03c5-4e0f-8059-2d8cba3babb4" />
 
 
