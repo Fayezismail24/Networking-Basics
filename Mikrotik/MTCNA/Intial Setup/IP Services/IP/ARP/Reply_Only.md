@@ -1,82 +1,109 @@
+## What is ARP = Reply-Only?
 
-# Reply-Only ARP in MikroTik RouterOS
+*Reply-only* means:
+- The router will *NOT* answer ARP requests
+- It will *ONLY* reply if the IP–MAC pair already exists in its ARP table
 
-### 1. **What is Reply-Only ARP?**
-**Reply-Only ARP** is a special type of **ARP (Address Resolution Protocol)** entry in MikroTik RouterOS that allows the router to **only reply to ARP requests** but **not initiate ARP requests**. This means that the router will **respond** to incoming ARP requests for a particular IP address but will **not send out ARP requests** for that IP address itself.
-
-
-
-
----
-
-### 2. **Use Cases for Reply-Only ARP**
-- **Preventing Unnecessary ARP Broadcasts**: This is useful when you want to minimize ARP traffic, especially for known devices that should only respond to ARP requests.
-- **Static IP Assignment**: When you assign a fixed IP to a device and only want the router to reply to ARP requests but not initiate them.
-- **Security**: In certain network setups, you might want to prevent the router from broadcasting ARP requests, making the network more secure.
+In simple words:  
+*No ARP entry → no communication*
 
 ---
 
-### 3. **How to Set a Reply-Only ARP Entry in MikroTik RouterOS**
+## Normal ARP (enabled)
 
-1. **Log in to the Router** via **Winbox**, **WebFig**, or **CLI**.
-   
-2. **Navigate to ARP Settings**:
-   - In **Winbox** or **WebFig**, go to `IP` > `ARP`.
+- Client asks: Who has 192.168.1.1?
+- Router replies automatically
+- Router learns IP–MAC dynamically
 
-3. **Add a Reply-Only ARP Entry**:
-   - **Winbox/WebFig**:
-     - Click on **Add** to create a new ARP entry.
-     - Enter the **IP Address** and **MAC Address** for the entry.
-     - Set the **Type** to **reply-only**.
-
-4. **Command Line**:
-   To add a **Reply-Only ARP entry** using CLI, run the following command:
-   ```bash
-   /ip arp add address=192.168.1.100 mac-address=00:1A:2B:3C:4D:5E interface=ether1 type=reply-only
-
-
-* **address**: The IP address you want to assign to a specific MAC address.
-* **mac-address**: The MAC address to associate with the IP.
-* **interface**: The interface the device is connected to (e.g., Ether1, Wi-Fi).
-* **type=reply-only**: Specifies the entry type as **reply-only**.
-
-5. **Verify the Reply-Only Entry**:
-   To confirm the entry was added:
-
-   ```bash
-   /ip arp print
-   ```
+Easy, open, less secure.
 
 ---
 
-### 5. **Benefits of Using Reply-Only ARP Entries**
+## Reply-Only ARP behavior
 
-* **Reduced ARP Traffic**: Prevents the router from sending ARP requests, which can help reduce network traffic and improve efficiency.
-* **Security**: Helps prevent the router from sending ARP requests that could potentially be intercepted or manipulated by malicious devices.
-* **Optimized for Fixed Devices**: Ideal for devices with **static IPs** that only need to respond to ARP requests but do not need to generate ARP requests.
+With *reply-only*:
+- Router ignores unknown ARP requests
+- Router only communicates with *pre-approved devices*
+- Devices must be manually added (static ARP or via DHCP lease)
 
----
-
-### 6. **Drawbacks or Limitations**
-
-* **Limited Use Case**: This feature is used in specific network configurations and may not be suitable for all environments.
-* **Manual Configuration**: Static ARP entries, including **reply-only** entries, need to be manually managed, which can be cumbersome in large networks.
+Think of it like a *bouncer at the door*:  
+No name on the list → you don’t get in.
 
 ---
 
-### 7. **Reply-Only ARP vs Dynamic ARP**
+## Why use Reply-Only?
 
-* **Dynamic ARP**: Automatically updates the ARP table with new IP-to-MAC mappings as devices communicate on the network.
-* **Reply-Only ARP**: The mapping is **static** and does not change unless manually updated. The router will only respond to ARP requests but will not initiate them.
+1. Stops ARP spoofing  
+2. Blocks unknown devices  
+3. Forces IP–MAC binding  
+
+*Common use cases:*
+- Hotspots
+- ISP customer networks
+- IP cameras
+- Secure office LANs
 
 ---
 
-### 8. **Conclusion**
+## How devices are allowed in Reply-Only
 
-* **Reply-Only ARP** entries are a powerful feature in MikroTik RouterOS that help optimize network communication by **only replying to ARP requests** without initiating them.
-* It's a useful tool for **network security** and **efficiency**, particularly in scenarios where you have **static IP assignments** and want to limit unnecessary ARP traffic.
+Two ways:
 
+### 1. Static ARP entry
+- You manually add IP + MAC
 
+### 2. DHCP lease with ARP binding
+- DHCP gives IP
+- MikroTik auto-adds ARP entry
+- Still controlled and safe
 
-This **Markdown** format should display cleanly in any Markdown viewer or editor. Let me know if you'd like further adjustments!
-```
+---
+
+## What breaks if you forget this?
+
+If you enable *reply-only* and:
+- Forget to add ARP entries
+
+Results:
+- Clients get no internet
+- Even ping fails
+- People think the network is dead
+
+Classic mistake.
+
+---
+
+## Static ARP vs Reply-Only (don’t confuse them)
+
+- *Static ARP*: an entry type  
+- *Reply-only*: an interface rule  
+
+They work together, not the same thing.
+
+---
+
+## Quick example
+
+You set:
+- Interface ARP = reply-only
+- Client IP: 192.168.1.10
+- Client MAC: AA:BB:CC:DD:EE:FF
+
+If that entry exists → works  
+If not → blocked silently
+
+---
+
+## When you should use it
+
+*Use it when:*
+- You want tight control
+- You know all devices
+
+*Avoid it when:*
+- Network is large
+- Devices change often
+- You want plug-and-play
+
+---
+
