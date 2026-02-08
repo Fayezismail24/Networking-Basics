@@ -107,3 +107,18 @@ If not → blocked silently
 
 ---
 
+
+
+<img width="1769" height="183" alt="image" src="https://github.com/user-attachments/assets/6c7699c4-a343-49df-ae52-27403b23dee8" />
+
+
+<img width="1913" height="920" alt="image" src="https://github.com/user-attachments/assets/30cb091b-6865-4b60-9a52-8163703c2a3d" />
+
+
+
+<img width="1909" height="971" alt="image" src="https://github.com/user-attachments/assets/4c54202f-6228-4cc9-afa8-c290c707808b" />
+
+
+
+
+
