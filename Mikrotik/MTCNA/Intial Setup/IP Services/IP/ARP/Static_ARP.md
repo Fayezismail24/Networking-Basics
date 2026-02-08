@@ -1,6 +1,3 @@
-
-## First, quick ARP recap
-
 ARP (Address Resolution Protocol) maps:  
 - *IP address → MAC address*
 
