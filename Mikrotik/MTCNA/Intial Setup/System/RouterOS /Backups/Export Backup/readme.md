@@ -15,6 +15,11 @@ Whole or partial configuration can be saved thru export
 
 
 
+<img width="850" height="766" alt="image" src="https://github.com/user-attachments/assets/77037428-bcad-4696-9e79-667e1fc8a1ae" />
+
+
+
+
 
 
 
