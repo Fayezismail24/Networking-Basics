@@ -19,6 +19,9 @@ Download NETINSTALL
 
 Disable ALL NIC THAT YOU HAVE IN THE COMPUTER
 
+<img width="1917" height="762" alt="image" src="https://github.com/user-attachments/assets/eca1e166-75b2-4aab-8d05-4d9ada0dd5c3" />
+
+
 KEEP ONLT THE ETHERNET avaialbe and make the IP STATIC 
 
 
