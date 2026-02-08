@@ -1,4 +1,7 @@
-The backup file in MikroTik is a binary file that contains a complete snapshot of the router’s configuration, including all settings, user data, and even sensitive information like passwords. This backup can be restored to the same device or a compatible MikroTik router (Same Model like example hap to hex will not work )  to revert to the exact configuration state it was in at the time the backup was created.
+The backup file in MikroTik is a binary file that contains a complete snapshot of the router’s configuration, including all settings, user data, and even sensitive information like passwords.
+This backup can be restored to the same device or a compatible MikroTik router (Same Model like example hap to hex will not work )  to revert to the exact configuration state it was in at the time the backup was created.
+You can put a password on the file m
+You can put an encryption on it 
 
 
 
