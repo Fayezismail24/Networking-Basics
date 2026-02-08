@@ -1,8 +1,13 @@
-<img width="1046" height="664" alt="image" src="https://github.com/user-attachments/assets/abad056b-8877-4637-81ec-549b09fae740" />
+Export File (.rsc) is a Script File 
 
-Does not take User Password 
+Plain Text Editable 
+
+Routeros User Passwords are not saved when doing export 
+
+Export is done thru terminal only 
+
+Whole or partial configuration can be saved thru export 
 
 
-<img width="1056" height="699" alt="image" src="https://github.com/user-attachments/assets/86ecb9b2-5d23-4506-a685-171155872c25" />
 
 
