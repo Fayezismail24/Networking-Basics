@@ -24,7 +24,30 @@ Open NETINSTALL
 
 REMOVE ALL CABLES FROM ROUTER
 
+
 PUT ONLY CABLE FROM PC TO ROUTER ON ETHER1 
+
+Press Reset button for 
+
+Plug the Power cable to the router 
+
+5 Seconds for Reset 
+
+10 Second Access Points CAP 
+
+15 Second for NetInstall Mode 
+
+on NetInstall make the net booting option on 
+
+Router should appear in netinsall 
+
+Select Router 
+
+Select File 
+
+Install 
+
+
 
 
 
