@@ -107,6 +107,7 @@ If not → blocked silently
 
 ---
 
+Below is a live example , i have changed the IP of my Laptop to see how the arp static reply only rule will be and how it will deny my arp request 
 
 
 <img width="1769" height="183" alt="image" src="https://github.com/user-attachments/assets/6c7699c4-a343-49df-ae52-27403b23dee8" />
