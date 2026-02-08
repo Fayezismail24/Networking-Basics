@@ -66,6 +66,9 @@ If you're setting up a small office network and want devices to access internal 
 1. Enable **Allow DNS Remote Requests** (if needed).
 2. Add a **static DNS entry** for `mail.local` pointing to `192.168.1.50`.
 3. Ensure that the router is set to forward DNS queries or use its own DNS servers for public domain names.
-````
 
-This **Markdown** format will display cleanly in any Markdown editor or viewer. Let me know if you need further adjustments!
+
+<img width="720" height="590" alt="image" src="https://github.com/user-attachments/assets/fb6bd5a1-2e92-407c-8506-eb143c24dc4c" />
+
+<img width="1559" height="830" alt="image" src="https://github.com/user-attachments/assets/37ccca65-0987-4d9b-a917-19cb1c95462d" />
+
