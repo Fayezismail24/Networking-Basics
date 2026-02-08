@@ -4,9 +4,15 @@ Search the Router You have at hand example HAP Series
 
 Get the Architecture 
 
+<img width="1085" height="599" alt="image" src="https://github.com/user-attachments/assets/7907ebe0-cc18-483d-a443-d2efa28abad2" />
+
+
 Go to Software Page
 
 Get the Routeros main packages > Download
+
+<img width="1815" height="790" alt="image" src="https://github.com/user-attachments/assets/16eb510c-7fc0-4301-afa3-44fa5522c652" />
+
 
 
 Download NETINSTALL 
@@ -37,15 +43,28 @@ Plug the Power cable to the router
 
 15 Second for NetInstall Mode 
 
+
 on NetInstall make the net booting option on 
+
+
+<img width="580" height="247" alt="image" src="https://github.com/user-attachments/assets/a8edc7ee-1d82-4545-9e27-3a22220e5db1" />
+
 
 Router should appear in netinsall 
 
-Select Router 
+<img width="862" height="880" alt="image" src="https://github.com/user-attachments/assets/90ce149a-8343-4fad-ac6e-8aa30e2627f4" />
+
+
 
 Select File 
 
+<img width="925" height="893" alt="image" src="https://github.com/user-attachments/assets/5e64c560-b783-4490-9ed3-9d4ee3954a17" />
+
+
 Install 
+
+<img width="937" height="899" alt="image" src="https://github.com/user-attachments/assets/8f521d21-2622-4e91-9f69-e9f26da0228e" />
+
 
 
 
