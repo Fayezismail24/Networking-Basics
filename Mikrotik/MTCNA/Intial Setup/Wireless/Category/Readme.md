@@ -115,3 +115,40 @@
 - *Station* is a normal Wi-Fi client
 - *Station Bridge* extends a network at Layer 2
 - *Wireless bridge* is a design concept, not a mode
+
+Got you, Boss 👍
+Here’s the **added section in Markdown**, ready to drop into your MikroTik wireless types notes.
+
+
+## Station Pseudobridge
+
+**What it is**
+- A workaround mode that allows a **station** to connect to an AP **when true Station Bridge is not supported**
+- Commonly used when connecting a MikroTik station to **non-MikroTik APs**
+
+**How it works**
+- The station connects wirelessly like a normal client
+- MikroTik **fakes (spoofs) MAC addresses** so multiple devices behind it can pass traffic
+- To the AP, it mostly looks like **one device**, not a real bridge
+
+**Key limitations**
+- ❌ Not a real Layer 2 bridge
+- ❌ MAC-based protocols may break
+- ❌ Some applications may not work correctly
+- ❌ Can cause issues with ARP and broadcasts
+
+**When to use**
+- When you **must connect multiple devices**
+- And the AP **does NOT support Station Bridge**
+- As a **last-resort solution**
+
+**When NOT to use**
+- In professional or ISP-grade networks
+- When you control both sides and can use **Station Bridge**
+
+**Quick summary**
+- Station Bridge → real bridge (MikroTik to MikroTik)
+- Station Pseudobridge → fake bridge (compatibility mode)
+```
+
+
