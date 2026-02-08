@@ -39,7 +39,7 @@
    To add a static ARP entry using CLI, run the following command:
    ```bash
    /ip arp add address=192.168.1.100 mac-address=00:1A:2B:3C:4D:5E interface=ether1
-````
+
 
 * **address**: The IP address you want to bind.
 * **mac-address**: The MAC address to which the IP should resolve.
@@ -81,10 +81,7 @@
 
 Static ARP is an important tool for ensuring **stable** and **secure network communication**. By associating specific IP addresses with fixed MAC addresses, you can prevent ARP attacks and ensure critical devices are always reachable. However, static ARP can be difficult to manage in large networks due to its manual nature.
 
-Let me know if you need help with setting up or troubleshooting static ARP on your MikroTik router!
 
-```
 
-This **Markdown** format should render cleanly in any Markdown editor or viewer. Let me know if you'd like further adjustments!
-```
+
 
