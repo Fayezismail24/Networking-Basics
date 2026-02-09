@@ -22,6 +22,8 @@ Examples:
 - 20 dBm = loud
 - 10 dBm = quieter
 
+- Higher TX power can help the signal travel farther, but it also depends on environmental factors like obstacles (walls, buildings, etc.).
+
 ---
 
 ## 2. What Is a Wireless Chain?
