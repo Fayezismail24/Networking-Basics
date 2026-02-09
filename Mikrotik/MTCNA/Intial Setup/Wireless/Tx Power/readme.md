@@ -34,6 +34,17 @@ Think of a chain as:
 - 1 chain → one mouth talking
 - 2 chains → two mouths talking at the same time
 - More chains → higher speed
+- A chain is essentially a pathway for data transmission.
+
+In Wi-Fi, it is connected to an antenna, and it works by sending and receiving wireless signals.
+
+Each chain uses a radio to transmit and receive signals at a particular frequency.
+
+How Does It Work?
+
+When a router or access point has multiple chains, it means that it can send and receive data simultaneously over different paths.
+
+This allows for faster speeds, as multiple streams of data can be processed at once. Think of it like having multiple lanes on a highway—more lanes (chains) allow more cars (data) to travel at the same time.
 
 ---
 
