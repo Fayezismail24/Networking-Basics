@@ -32,7 +32,7 @@ From the image:
 - Each channel has a **center frequency**
 
 Examples:
-- Channel 1 → 2412 MHz  
+- Channel 1 → 2412 MHz    12  >  37 > 62 
 - Channel 6 → 2437 MHz  
 - Channel 11 → 2462 MHz  
 
