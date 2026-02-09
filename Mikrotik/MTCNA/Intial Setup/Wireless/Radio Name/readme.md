@@ -4,3 +4,7 @@
 <img width="1762" height="463" alt="image" src="https://github.com/user-attachments/assets/32792d6d-7894-4b0e-bcf8-cee0a2f2d176" />
 
 
+
+Radio Name is the identiy of the wireless device that other routeros can see it 
+
+
