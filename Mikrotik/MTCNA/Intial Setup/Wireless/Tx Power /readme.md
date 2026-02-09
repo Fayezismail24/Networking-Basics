@@ -121,3 +121,8 @@ Total loudness stays the same.
 
 > Do not expect more chains to increase signal strength.  
 > Chains are for speed, TX power controls loudness.
+
+
+<img width="1152" height="744" alt="image" src="https://github.com/user-attachments/assets/b755c422-189f-4621-b71d-eb70e51f22c5" />
+
+
