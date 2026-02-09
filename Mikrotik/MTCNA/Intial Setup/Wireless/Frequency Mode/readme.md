@@ -1,6 +1,4 @@
-Alright Boss, this is **pure MikroTik wireless logic**, and people mix these up all the time. I’ll explain them **cleanly**, **practically**, and in **Markdown**, so you can reuse it for notes or exams.
 
-```md
 # MikroTik Wireless: Frequency Mode Explained
 
 This covers:
