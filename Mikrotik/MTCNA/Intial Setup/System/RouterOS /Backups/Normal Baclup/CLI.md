@@ -1,54 +1,62 @@
 
 
-# MikroTik Backup Command
+# MikroTik Backup & Restore Commands
 
-### Basic Command
+### 1️⃣ Save Backup
 
 ```bash
 [admin@MikroTik] > system/backup/save name=fayeztest
-[admin@MikroTik] > system backup save name=" " 
-
-
 ```
 
-**Explanation:**
-
-* `system/backup/save` → The command to **create a full backup**
-* `name=fayeztest` → The **filename** of the backup
-* The file will be saved in the **router’s file list**
-
----
-
-### Optional Parameters
-
-| Option          | Example                | Description                                                |
-| --------------- | ---------------------- | ---------------------------------------------------------- |
-| `password=`     | `password=MySecret123` | Protects the backup with a password                        |
-| `dont-encrypt=` | `dont-encrypt=no`      | Enables encryption (`no` = encrypt, `yes` = no encryption) |
-
-**Example with password and encryption:**
+**Optional Parameters:**
 
 ```bash
 [admin@MikroTik] > system/backup/save name=fayeztest password=MySecret123 dont-encrypt=no
 ```
 
-**What this does:**
+* `name=` → Backup filename
+* `password=` → Protects backup
+* `dont-encrypt=no` → Encrypts the backup
 
-* Saves the backup as **fayeztest.backup**
-* Requires the **password** to restore
-* Encrypts the backup for security
-
----
-
-### Notes
-
-* Backup is **binary**, includes all config and passwords
-* Only restore on **same device or compatible model**
-* Recommended to **download the backup** to your PC after creation
+**Check backup file:**
 
 ```bash
 [admin@MikroTik] > file print
 ```
 
-* Use `file print` to **see the backup in the router file list**
+---
+
+### 2️⃣ Restore Backup
+
+```bash
+[admin@MikroTik] > system/backup/load name=fayeztest.backup
+```
+
+**Explanation:**
+
+* `system/backup/load` → Command to **restore a full backup**
+* `name=` → The **backup filename** to restore
+* If the backup has a **password**, you will be prompted to enter it
+
+**Example with password:**
+
+```bash
+[admin@MikroTik] > system/backup/load name=fayeztest.backup
+Enter password: MySecret123
+```
+
+**What happens after restore:**
+
+* Router **reverts to the exact state** when backup was created
+* All configuration, users, and passwords are restored
+* Default admin user will be replaced if it was changed in the backup
+
+---
+
+### Notes / Exam Tips
+
+* Backup is **binary** → cannot edit manually
+* Only restore on **same device or compatible model**
+* Always **download backup to PC** for safety
+* Restoring **overwrites all current configuration**
 
