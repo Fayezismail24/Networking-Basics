@@ -80,6 +80,17 @@
 
 ---
 
+
+
+| Action                           | Reset Configuration | Netinstall |
+| -------------------------------- | ------------------- | ---------- |
+| Deletes config                   | ✅                   | ✅          |
+| Deletes users/passwords          | ✅                   | ✅          |
+| Reinstalls RouterOS              | ❌                   | ✅          |
+| Keeps installed packages         | ✅                   | ❌          |
+| Choose which packages to install | ❌                   | ✅          |
+---
+
 Both Netinstall and Reset Configuration:
 
 ❌ Delete all users
