@@ -2,9 +2,9 @@
 ### **Backup**
 
 ```bash
-/system/backup/save name=GTA
-/system/backup/save name=f\GTA password=MySecret123 dont-encrypt=no
-/system/backup/load name=GTA.backup
+/system backup save name=GTA
+/system backup save name=GTA password=MySecret123 dont-encrypt=no
+/system backup load name=GTA.backup
 ```
 
 ### **Export**
