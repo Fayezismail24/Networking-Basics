@@ -19,11 +19,9 @@
 
 ---
 
-## 2) Wireless Bridge (Concept, not a real mode)
+## 2) Station Bridge (Wireless Bridge)
 
-*Important*
-- This is NOT an actual MikroTik wireless mode
-- It’s a commonly used term
+
 
 *What people usually mean*
 - Two devices connected wirelessly
