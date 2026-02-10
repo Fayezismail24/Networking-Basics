@@ -1,49 +1,173 @@
 
-## 📡 MikroTik Frequency Mode Detailed
+# MikroTik Wireless: Frequency Mode Explained
 
-| Mode | Description | Use Case / Notes | Risks / Special Info |
-|------|------------|-----------------|--------------------|
-| **Regulatory** | Auto-selects only frequencies **allowed by the country/regulatory domain**. | Default and recommended mode. AP or client automatically follows country rules (channels, TX power, DFS). | Safe, legal, avoids radar interference. Cannot use channels outside country limits. |
-| **Manual Tx Power** | You **manually select a frequency/channel** and can adjust TX power. | Useful for **point-to-point links**, avoiding interference, or crowded areas. Gives more control for optimization. | Must ensure frequency is allowed by country rules. Wrong settings can cause interference or poor connection. |
-| **Superchannel** | Lets you use **any frequency**, even outside regulatory limits (ignores country rules). | Lab/testing environments, special RF setups, experimenting with restricted channels. | Illegal in most countries. Can interfere with radar, emergency systems. Not for production. |
-
----
-
-### 🔑 Additional Notes for MTCNA Exam
-
-1. **Regulatory Mode**
-   - Always safe for exams unless the question says otherwise.
-   - Automatically handles DFS and CAC timing.
-   - Usually used in wireless AP deployment.
-
-2. **Manual Tx Power Mode**
-   - Allows precise **channel selection** and **power adjustment**.
-   - Frequently used in **point-to-point wireless links** to optimize range and performance.
-   - Can be combined with **specific frequency width** (20/40/80 MHz) to control throughput.
-
-
-``
-###  Superchannel
-
-The **Superchannel** feature in MikroTik RouterOS extends the wireless frequency range beyond standard regulatory limits, allowing for **channel bonding** and **higher throughput**. It enables MikroTik devices to use **unused frequencies** and **wider channel widths** (e.g., 40 MHz, 80 MHz, 160 MHz) for improved performance, especially in **long-distance wireless links** or **high-density environments**.
-
-#### Key points:
-- **Frequency Range Extension**: Operate on frequencies outside the typical regulatory domain.
-- **Channel Aggregation**: Combine multiple channels for increased bandwidth.
-- **Dynamic Frequency Usage**: Select non-overlapping frequencies for better performance.
-- **Regulatory Compliance**: Ensure compliance with local laws before enabling.
-- **Supported Devices**: Available on compatible MikroTik wireless devices (e.g., RouterBOARD, SXTsq).
-  
-Make sure to check compatibility and local regulations before enabling the Superchannel feature.
-
+This covers:
+- Regulatory Domain
+- Manual TX Power
+- Superchannel
+- How they relate to each other
+- When to use each one
 
 ---
 
-### 🧠 Quick Exam Memory Trick
+## 1. Regulatory Domain (Country Mode)
 
-- Regulatory → Auto, safe, legal  
-- Manual Tx Power → You choose frequency and power  
-- Superchannel → Ignore rules, risky, test/lab only  
+### What it is
+Regulatory Domain means:
+> MikroTik follows **your country’s wireless laws**
 
+When you set:
+- Country (e.g. Lebanon, Germany, USA)
+- Installation (indoor / outdoor)
 
+The router automatically enforces:
+- Allowed frequencies
+- Maximum TX power
+- Allowed channel widths
+- DFS rules (on 5 GHz)
 
+### What you control
+- You **cannot exceed legal limits**
+- TX power is **auto-limited**
+- Only legal channels are available
+
+### Pros
+- Legal
+- Stable
+- Less interference
+- Required for ISPs and enterprises
+
+### Cons
+- Limited freedom
+- Lower max TX power sometimes
+
+### When to use
+- Production networks
+- Client networks
+- Any real-world deployment
+
+---
+
+## 2. Manual TX Power
+
+### What it is
+Manual TX Power lets you:
+> Override automatic power control
+
+You manually set:
+- Radio TX power (dBm)
+- Per-chain power (in advanced setups)
+
+### Important truth
+Higher TX power ≠ better signal
+
+Problems with high TX power:
+- More interference
+- Clients can’t reply back (asymmetry)
+- Worse performance
+- Hidden-node issues
+
+### Correct usage
+- Use **lowest power** that gives stable signal
+- Balance AP power with client power
+- Use manual TX only when you **know why**
+
+### When to use
+- Fine-tuning coverage
+- High-density environments
+- Long-distance point-to-point links
+
+---
+
+## 3. Superchannel Mode
+
+### What it is
+Superchannel means:
+> No country rules. No limits.
+
+MikroTik allows:
+- All frequencies (even illegal ones)
+- Very high TX power
+- Non-standard channels
+
+It ignores regulatory limits completely.
+
+### Why it exists
+- Labs
+- Testing
+- Licensed links
+- Isolated environments
+
+### Risks
+- Illegal in most countries
+- Can interfere with:
+  - Radar
+  - Airports
+  - ISPs
+  - Emergency services
+- Can cause serious penalties
+
+### When to use
+- Lab testing only
+- Licensed spectrum
+- Remote, controlled environments
+
+❌ Never for normal Wi-Fi
+
+---
+
+## 4. Regulatory vs Manual TX Power
+
+| Feature | Regulatory Domain | Manual TX Power |
+|------|------------------|----------------|
+| Country limits | Enforced | Still enforced |
+| Max power | Auto-limited | User-selected (within limits) |
+| Legal | Yes | Yes |
+| Stability | High | Depends on user |
+
+Key point:
+> Manual TX Power **does not break the law** if Regulatory Domain is enabled.
+
+---
+
+## 5. Regulatory Domain vs Superchannel
+
+| Feature | Regulatory Domain | Superchannel |
+|------|------------------|--------------|
+| Country laws | Enforced | Ignored |
+| Allowed frequencies | Limited | All |
+| TX power limit | Yes | No |
+| Legal use | Yes | Usually no |
+
+Key point:
+> Superchannel bypasses everything.
+
+---
+
+## 6. Frequency Mode Summary
+
+- **Regulatory Domain**  
+  Safe, legal, automatic, recommended
+
+- **Manual TX Power**  
+  Advanced tuning, still legal
+
+- **Superchannel**  
+  Dangerous freedom, lab-only
+
+---
+
+## 7. Golden Rule (MTCNA mindset)
+
+- Always start with **Regulatory Domain**
+- Use **manual TX power only when necessary**
+- Treat **Superchannel like a loaded weapon**
+
+If you want next:
+- Real-world examples
+- Exam-style questions
+- MikroTik config screenshots logic
+- Or comparison with Ubiquiti / Cisco behavior
+
+Just say the word, Boss.
+```
