@@ -6,6 +6,7 @@
 /system backup load name=GTA.backup
 
 /system backup save name=GTA.backup password=MySecret123 dont-encrypt=no
+[admin@MikroTik] > system/backup/load name=fayezzz.backup password=123
 
 ```
 
