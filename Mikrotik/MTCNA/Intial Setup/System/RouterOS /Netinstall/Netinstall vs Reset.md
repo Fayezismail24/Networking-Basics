@@ -80,6 +80,14 @@
 
 ---
 
+Both Netinstall and Reset Configuration:
+
+❌ Delete all users
+
+❌ Delete all passwords
+
+✅ Restore the default admin user
+
 ## Key exam traps ⚠️
 
 * ❌ **Reset Configuration does NOT reinstall RouterOS**
