@@ -39,7 +39,7 @@
 
 ---
 
-## 3) Station
+## 3) Station Mode
 
 *What it is*
 - Standard Wi-Fi client mode
@@ -59,38 +59,15 @@
 
 *Think of it as*
 - A phone or laptop connecting to Wi-Fi
+<img width="1024" height="1024" alt="Gemini_Generated_Image_qnr8eqqnr8eqqnr8" src="https://github.com/user-attachments/assets/8dba2925-3306-4686-a5d7-eff413ed9de8" />
+
+
+
+
 
 ---
 
-## 4) Station Bridge
 
-*What it really does*
-- Connects to ONE access point only
-- Works at Layer 2
-- Passes MAC addresses
-
-*Requirements*
-- Access point must support bridging
-- Usually requires AP Bridge, WDS, or 4-address mode
-
-*What it does NOT do*
-- Does NOT connect to multiple access points
-- Does NOT aggregate or load-balance Wi-Fi links
-
-*Use case*
-- Point-to-point or point-to-multipoint links
-- Extending a LAN over wireless
-- Replacing an Ethernet cable
-
-*Example*
-- Main router → AP Bridge
-- Remote router → Station Bridge
-- Remote LAN behaves as if it’s connected by cable
-
-*Think of it as*
-- A wireless Ethernet cable
-
----
 
 ## Quick Comparison Table
 
