@@ -1,8 +1,4 @@
-
-
-
-
-## 2) Station Bridge (Wireless Bridge)
+## 1) Station Bridge (Wireless Bridge)
 
 ### What people usually mean
 
