@@ -81,3 +81,5 @@ Since you’re doing networking + MikroTik + real infrastructure:
 *Don’t use it for:*
 - Normal users
 - Laptops, phones, guest devices
+
+<img width="813" height="553" alt="image" src="https://github.com/user-attachments/assets/2e4a1eef-c355-41dc-bd6b-78342b34d5c1" />
