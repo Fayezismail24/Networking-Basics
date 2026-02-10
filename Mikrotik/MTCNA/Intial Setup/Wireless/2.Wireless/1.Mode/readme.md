@@ -140,7 +140,6 @@
 ## Quick Comparison Table
 | Mode            | OSI Layer | Connects To | Passes MAC | Typical Use         |
 |-----------------|-----------|-------------|------------|---------------------|
-| Bridge          | L2        | Interfaces  | Yes        | Combine ports       |
 | Station Mode    | L3        | One AP      | No         | Internet access     |
 | Station Bridge  | L2        | One AP      | Yes        | Network extension   |
 
