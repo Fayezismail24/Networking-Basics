@@ -36,6 +36,8 @@
 
 *Use case*
 - Point-to-point wireless link acting like an Ethernet cable
+- <img width="1257" height="714" alt="image" src="https://github.com/user-attachments/assets/5ebc1882-4deb-4f58-a7da-d69e8f93974c" />
+
 
 ---
 
