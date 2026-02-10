@@ -10,6 +10,6 @@
 ### **Export**
 
 ```bash
-/export file=fGTA
+/export file=GTA
 /export file=GTA section=interface
 /import file=GTA.rsc
