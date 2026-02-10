@@ -1,29 +1,6 @@
 
 
----
 
-## 1) Bridge (Normal Bridge – NOT a wireless mode)
-
-### What it is
-
-* A virtual interface that joins multiple interfaces together
-* Can include Ethernet ports and wireless interfaces
-
-### What it does
-
-* Makes all added interfaces behave as one network
-* Single DHCP server and one subnet
-
-### Example
-
-* `ether1 + ether2 + wlan1 → bridge`
-* Any connected device gets an IP from the same DHCP pool
-
-### Think of it as
-
-* Glue that sticks interfaces together
-
----
 
 ## 2) Station Bridge (Wireless Bridge)
 
@@ -46,7 +23,7 @@
 
 ---
 
-## 3) Station Mode
+## 2) Station Mode
 
 ### What it is
 
@@ -76,7 +53,7 @@
 
 ---
 
-## 4) AP Bridge (Access Point Bridge)
+## 3) AP Bridge (Access Point Bridge)
 
 ### What it is
 
@@ -126,7 +103,7 @@
 
 ---
 
-## 5) Station Pseudobridge
+## 4) Station Pseudobridge
 
 ### What it is
 
