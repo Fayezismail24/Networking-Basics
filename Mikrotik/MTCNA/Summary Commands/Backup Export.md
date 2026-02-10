@@ -14,7 +14,7 @@
 
 ```bash
 /system export file=GTA
-/ import file=GTA.rsc
+/ import file-name=GTA.rsc
 ```
 
 ### **Partial Export **
