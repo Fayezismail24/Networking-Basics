@@ -16,9 +16,6 @@
 /system export file=GTA
 /system export file=GTA section=interface
 / import file=GTA.rsc
-
-
-
 ```
 
 ### **Partial Export **
