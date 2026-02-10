@@ -73,13 +73,71 @@ Now the router is waiting for Netinstall.
 
 ---
 
-## One-line exam answer
-
-**Netinstall is a MikroTik utility used to install or recover RouterOS over Ethernet when the router cannot boot or be accessed.**
 
 ---
 
-If you want, next I can:
+## Netinstall can be used to…
+
+### 1️⃣ Install package for different hardware architecture
+
+❌ **FALSE**
+
+* Each MikroTik device has a **fixed CPU architecture** (MIPSBE, SMIPS, ARM, ARM64, etc.)
+* You **cannot** install RouterOS for a different architecture
+* Netinstall will **not allow it**
+
+👉 Example: You cannot install ARM RouterOS on a MIPS device.
+
+---
+
+### 2️⃣ Reinstall software without losing licence
+
+✅ **TRUE**
+
+* The **license is stored in the router hardware**
+* Netinstall **does NOT remove the license**
+* After reinstall, the same license level remains
+
+👉 Very important MTCNA point.
+
+---
+
+### 3️⃣ Keep configuration, but reset a lost admin password
+
+❌ **FALSE**
+
+* Netinstall **wipes the configuration**
+* You cannot keep config and just reset the password
+* It is a **clean install**
+
+👉 If config is kept, password stays. If password is reset, config is gone.
+
+---
+
+### 4️⃣ Install different software version (upgrade or downgrade)
+
+✅ **TRUE**
+
+* Netinstall allows:
+
+  * Upgrade
+  * Downgrade
+  * Install a specific RouterOS version
+
+👉 Useful when a new version is buggy.
+
+---
+
+## Final exam-ready summary
+
+| Statement                                           | Correct |
+| --------------------------------------------------- | ------- |
+| Install package for different hardware architecture | ❌       |
+| Reinstall software without losing licence           | ✅       |
+| Keep configuration but reset admin password         | ❌       |
+| Install different software version                  | ✅       |
+
+
 
 * Compare **Netinstall vs Reset Configuration**
 * Give you **step-by-step Netinstall lab**
