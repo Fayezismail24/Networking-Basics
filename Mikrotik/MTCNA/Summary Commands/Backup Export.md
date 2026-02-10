@@ -19,5 +19,5 @@
 
 ### **Partial Export **
 ```bash
-ip address export file=" "
+ip address export file="132"
 import file-name=132.rsc
