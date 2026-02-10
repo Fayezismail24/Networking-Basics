@@ -66,30 +66,20 @@
 
 ---
 
-## Side-by-side exam table
+| Feature / Action                            | Netinstall | Reset Configuration      |
+| ------------------------------------------- | ---------- | ------------------------ |
+| Requires PC                                 | ✅          | ❌                        |
+| Reinstalls RouterOS                         | ✅          | ❌                        |
+| Works if router won’t boot                  | ✅          | ❌                        |
+| Removes configuration                       | ✅          | ✅                        |
+| Deletes users & passwords                   | ✅          | ✅                        |
+| Restores default admin (no password)        | ✅          | ✅                        |
+| Keeps license                               | ✅          | ✅                        |
+| Change RouterOS version (upgrade/downgrade) | ✅          | ❌                        |
+| Keeps installed packages                    | ❌          | ✅                        |
+| Choose which packages to install            | ✅          | ❌                        |
+| Reset lost password                         | ✅          | ✅ (only if router boots) |
 
-| Feature                    | Netinstall | Reset Configuration      |
-| -------------------------- | ---------- | ------------------------ |
-| Requires PC                | ✅          | ❌                        |
-| Reinstalls RouterOS        | ✅          | ❌                        |
-| Works if router won’t boot | ✅          | ❌                        |
-| Removes configuration      | ✅          | ✅                        |
-| Keeps license              | ✅          | ✅                        |
-| Change RouterOS version    | ✅          | ❌                        |
-| Reset lost password        | ✅          | ✅ (only if router boots) |
-
----
-
-
-
-| Action                           | Reset Configuration | Netinstall |
-| -------------------------------- | ------------------- | ---------- |
-| Deletes config                   | ✅                   | ✅          |
-| Deletes users/passwords          | ✅                   | ✅          |
-| Reinstalls RouterOS              | ❌                   | ✅          |
-| Keeps installed packages         | ✅                   | ❌          |
-| Choose which packages to install | ❌                   | ✅          |
----
 
 Both Netinstall and Reset Configuration:
 
