@@ -1,6 +1,6 @@
 In MikroTik RouterOS, the **Access List** is the counterpart to the Connect List.
 
-While the Connect List is for the client, the **Access List is for the Access Point (AP)** to control which clients are allowed to connect.
+While the Connect List is for the client to which AP they can connect to , the **Access List is for the Access Point (AP)** to control which clients are allowed to connect.
 
 ---
 
