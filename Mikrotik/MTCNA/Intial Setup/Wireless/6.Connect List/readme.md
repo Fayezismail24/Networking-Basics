@@ -41,7 +41,3 @@ When a MikroTik wireless interface starts up, it follows this logic:
 3. **Attempt Connection:** If all criteria are met, it connects.
 4. **Fallback:** If the first entry doesn't match or the signal is too weak, it moves to the second entry, and so on.
 5. **Default:** If nothing in the list matches, it will only connect to an AP if **"Default Authenticate"** is checked in the Wireless Interface settings.
-
----
-
-**Would you like me to generate the Terminal commands (`/interface wireless connect-list`) so you can copy-paste a specific rule into your router?**
