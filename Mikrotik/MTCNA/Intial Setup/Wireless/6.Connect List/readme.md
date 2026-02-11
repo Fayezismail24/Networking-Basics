@@ -44,7 +44,7 @@ When a MikroTik wireless interface starts up, it follows this logic:
 
 
 
-<img width="1372" height="449" alt="image" src="https://github.com/user-attachments/assets/dafb77bf-bc2e-41ad-a74a-eaeb95cb2a86" />
+<img width="1185" height="453" alt="image" src="https://github.com/user-attachments/assets/3abec09e-77b9-4247-846a-60bb54288e15" />
 
 ### Real-World Example: Signal Thresholds
 
