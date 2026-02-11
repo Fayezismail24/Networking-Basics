@@ -58,4 +58,14 @@ In your Wireless Interface settings, there is a checkbox called **Default Authen
 | **Client Tx Limit**       | Limits the maximum transmission power (Tx) for client devices.                                 |
 | **AP Tx Limit**           | Limits the maximum transmission power (Tx) for the AP.                                         |
 
+Time Field:
 
+Time: Specifies the start time for the access rule. This can be set in hours and minutes (e.g., 00:00:00 for midnight).
+
+Duration: Defines the duration of the time period for the rule, such as 1d 00:00:00 for one day.
+
+Days Selection:
+
+Below the time field, you can check the days of the week (e.g., Mon, Tue, Wed, Thu, Fri, Sat, Sun) that you want the rule to apply to.
+
+For example, you can set a rule to only allow access from Monday to Friday during a specified time period.
