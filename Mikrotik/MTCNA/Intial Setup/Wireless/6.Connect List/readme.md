@@ -41,3 +41,10 @@ When a MikroTik wireless interface starts up, it follows this logic:
 3. **Attempt Connection:** If all criteria are met, it connects.
 4. **Fallback:** If the first entry doesn't match or the signal is too weak, it moves to the second entry, and so on.
 5. **Default:** If nothing in the list matches, it will only connect to an AP if **"Default Authenticate"** is checked in the Wireless Interface settings.
+
+
+
+<img width="1372" height="449" alt="image" src="https://github.com/user-attachments/assets/dafb77bf-bc2e-41ad-a74a-eaeb95cb2a86" />
+
+Real-World Example: Signal ThresholdsAs you mentioned, the Signal Range is the most powerful tool for managing roaming.Rule Setup: Set the Signal Range to $-70..120$.Behavior: * The device will maintain a connection as long as the signal is $-70$ dBm or better.If the signal drops to $-71$ dBm, the device will automatically disconnect and search for another Access Point that meets the criteria in your list.This prevents the "Sticky Client" problem where a device stays connected to a slow, distant AP.
+
