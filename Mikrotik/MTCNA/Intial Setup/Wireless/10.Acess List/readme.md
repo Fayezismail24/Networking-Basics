@@ -46,3 +46,16 @@ In your Wireless Interface settings, there is a checkbox called **Default Authen
 
 <img width="756" height="550" alt="image" src="https://github.com/user-attachments/assets/dc149214-7263-4d36-af11-e78ef1ebab31" />
 
+
+
+| Field                     | Description                                                                                    |
+| ------------------------- | ---------------------------------------------------------------------------------------------- |
+| **MAC Address**           | The unique hardware ID of the client device (e.g., a phone or laptop).                         |
+| **Interface**             | Which wireless card (`wlan1`, `wlan2`) the rule applies to.                                    |
+| **Signal Strength Range** | The range (e.g., `-75..120`) a client must stay within to remain connected.                    |
+| **Authentication**        | A checkbox that determines if the device is allowed (`checked`) or blocked (`unchecked`).      |
+| **Forwarding**            | Determines if the client is allowed to communicate with other wireless clients on the same AP. |
+| **Client Tx Limit**       | Limits the maximum transmission power (Tx) for client devices.                                 |
+| **AP Tx Limit**           | Limits the maximum transmission power (Tx) for the AP.                                         |
+
+
