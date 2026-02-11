@@ -1,7 +1,9 @@
 
 ## The MikroTik Connect List
 
-The **Connect List** is a set of rules used by a MikroTik device when it is operating in **Station** (client) mode. It tells the device exactly which Access Points (APs) it is allowed to connect to, which ones to prefer, and how strong the signal must be to stay connected.
+The **Connect List** is a set of rules used by a MikroTik device when it is operating in **Station** (client) mode. 
+
+It tells the device exactly which Access Points (APs) it is allowed to connect to, which ones to prefer, and how strong the signal must be to stay connected.
 
 ### Key Configuration Fields
 
