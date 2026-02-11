@@ -42,3 +42,7 @@ In your Wireless Interface settings, there is a checkbox called **Default Authen
 
 * **If Checked**: Any client with the correct password can connect, unless they are specifically blocked in the Access List.
 * **If Unchecked**: **Only** devices explicitly listed in your Access List can connect. This is a very high-security configuration.
+
+
+<img width="756" height="550" alt="image" src="https://github.com/user-attachments/assets/dc149214-7263-4d36-af11-e78ef1ebab31" />
+
