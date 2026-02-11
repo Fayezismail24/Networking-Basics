@@ -1,4 +1,4 @@
-## 3. Registration Table
+## Registration Table
 
 The **Registration Table**  is the real-time monitoring hub for all active wireless links.
 
