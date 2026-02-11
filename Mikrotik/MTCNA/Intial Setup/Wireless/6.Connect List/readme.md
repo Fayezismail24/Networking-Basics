@@ -62,6 +62,41 @@ As you mentioned, the **Signal Range** is the most powerful tool for managing ro
 
 This prevents the **"Sticky Client"** problem. Without this rule, a device might stay "stuck" to a distant Access Point with a terrible, slow connection even if you are standing right next to a much better one.
 
+
 ---
 
-**Would you like the CLI command to apply this signal range to your `wlan1` interface?**
+### The Sequential Logic Flow
+
+When your wireless interface is looking for a connection, it acts like a person checking off a "To-Do" list in order:
+
+1. **Start at Rule 0:** The router checks the first entry. If an Access Point (AP) is found that matches the SSID, MAC, and signal strength (e.g., your `-70..120` range), it connects immediately.
+2. **Move to Rule 1:** If Rule 0 cannot be satisfied (e.g., the AP is turned off or the signal is too weak at -75 dBm), the router ignores it and moves to Rule 1.
+3. **Continue Down:** It will continue through Rule 2, 3, etc., until a match is found.
+4. **The "End of List" Scenario:** If it hits the end of the list and nothing matches:
+* If **Default Authenticate** is checked in your Wireless Interface settings, it will try to connect to *any* available AP that matches your SSID.
+* If **Default Authenticate** is unchecked, the router will simply not connect to anything.
+
+
+
+---
+
+### Why this Order Matters
+
+This top-down approach is perfect for **Failover/Backup** scenarios:
+
+* **Rule 0 (Primary):** Your high-speed 5GHz backbone link.
+* **Rule 1 (Secondary):** A slower 2.4GHz backup link or a different AP.
+
+By putting the preferred connection at the top (Rule 0), you ensure the MikroTik always tries the "best" option first before settling for the backup.
+
+---
+
+### Pro-Tip for your `-70..120` Rule
+
+Since you have two identical rules in your image (both for `wlan1` with the same signal range), the router will always try to satisfy **Rule 0** first. If Rule 0 and Rule 1 point to the same SSID, Rule 1 acts as a redundant check.
+
+> **Important:** If you want Rule 1 to be a "fallback" with a weaker signal, you might set Rule 0 to `-70..120` and Rule 1 to `-85..120`. This tells the router: "Try for a great signal first; if you can't find one, I'll accept a weaker one."
+
+
+
+
