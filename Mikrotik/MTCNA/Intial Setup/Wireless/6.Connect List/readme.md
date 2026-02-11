@@ -46,5 +46,22 @@ When a MikroTik wireless interface starts up, it follows this logic:
 
 <img width="1372" height="449" alt="image" src="https://github.com/user-attachments/assets/dafb77bf-bc2e-41ad-a74a-eaeb95cb2a86" />
 
-Real-World Example: Signal ThresholdsAs you mentioned, the Signal Range is the most powerful tool for managing roaming.Rule Setup: Set the Signal Range to $-70..120$.Behavior: * The device will maintain a connection as long as the signal is $-70$ dBm or better.If the signal drops to $-71$ dBm, the device will automatically disconnect and search for another Access Point that meets the criteria in your list.This prevents the "Sticky Client" problem where a device stays connected to a slow, distant AP.
+### Real-World Example: Signal Thresholds
 
+As you mentioned, the **Signal Range** is the most powerful tool for managing roaming. Here is how that looks in practice:
+
+> **Rule Setup:** Set the Signal Range to `-70..120`
+
+#### Behavior:
+
+* **The Connection:** The device will maintain a stable connection as long as the signal strength is **-70 dBm** or better (e.g., -60 dBm, -50 dBm).
+* **The Threshold:** If the signal drops to **-71 dBm**, the MikroTik will automatically disconnect. It doesn't just wait to lose the signal entirely; it proactively cuts the link.
+* **The Hunt:** Once disconnected, it immediately searches for another Access Point in your Connect List that meets the required criteria.
+
+#### Why this matters:
+
+This prevents the **"Sticky Client"** problem. Without this rule, a device might stay "stuck" to a distant Access Point with a terrible, slow connection even if you are standing right next to a much better one.
+
+---
+
+**Would you like the CLI command to apply this signal range to your `wlan1` interface?**
