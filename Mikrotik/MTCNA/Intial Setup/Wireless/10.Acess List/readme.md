@@ -157,3 +157,67 @@ Students often forget that if they want to block something during a specific tim
 > **Rule of Thumb:** If a rule is "Time Sensitive," it is only "Alive" during those hours. When those hours end, that rule effectively disappears from the list until the next day.
 
 **Would you like me to show you how to use the "Extra" tab in WinBox to see exactly when a rule is active or inactive?**
+
+
+
+
+In MikroTik RouterOS, managing access based on the day of the week is a classic **MTCNA** lab scenario. To achieve the "Allow Mon-Fri / Block Sat-Sun" logic, you have two primary ways to configure the firewall.
+
+---
+
+## Method 1: The "Simple Block" (Recommended)
+
+In this method, you assume that traffic is generally allowed, but you want to create a specific "wall" for the weekend.
+
+### Rule Logic:
+
+* **Action:** `drop`
+* **Days:** `sat`, `sun`
+* **Time:** `00:00:00` - `23:59:59` (All day)
+
+**How it works:** On Monday through Friday, this rule is **inactive**. Packets will "fall through" this rule and hit the default accept policy. On Saturday morning at 00:00:00, the rule "wakes up" and starts dropping all packets that hit it until Sunday night.
+
+---
+
+## Method 2: The "Strict White-list" (Two Rules)
+
+This is used if your router is set to a "Drop everything by default" policy. This is more secure but requires more configuration.
+
+### Rule A: The Permission
+
+* **Action:** `accept`
+* **Days:** `mon`, `tue`, `wed`, `thu`, `fri`
+* **Purpose:** This opens a "gate" specifically for workdays.
+
+### Rule B: The Cleanup (The Hammer)
+
+* **Action:** `drop`
+* **Days:** (Leave all boxes unchecked—this means "all days")
+* **Purpose:** This catches any packet that didn't match Rule A (meaning packets from Saturday and Sunday).
+
+---
+
+## 🛠️ Configuration via Terminal (CLI)
+
+For your GitHub documentation, here are the commands to implement **Method 1**:
+
+```bash
+# Create a rule that blocks traffic only on weekends
+/ip firewall filter
+add action=drop chain=forward comment="Block Weekend Access" \
+    days=sat,sun time=0s-1d protocol=tcp
+
+```
+
+---
+
+## ⚠️ Important MTCNA Concept: "Packet Matching"
+
+Remember the **Last Line** logic we discussed:
+
+* **On Friday:** The packet looks at the "Weekend Block" rule. The router says: *"The day is Friday, but this rule is for Sat/Sun. NO MATCH."* The packet moves to the next rule and is allowed.
+* **On Saturday:** The packet looks at the rule. The router says: *"The day is Saturday. This rule is for Sat/Sun. MATCH!"* The packet is immediately **Dropped**.
+
+> **Pro Tip:** Always check your **System Clock** (`/system clock print`). If your router's date is set incorrectly (e.g., it thinks today is 1970), your time-based rules will block the wrong days!
+
+**Would you like me to show you how to synchronize your router's clock using NTP so these rules always run on time?**
