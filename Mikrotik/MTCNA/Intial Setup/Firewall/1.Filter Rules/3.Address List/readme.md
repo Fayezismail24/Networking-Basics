@@ -35,6 +35,6 @@ A professional firewall configuration usually includes these standard lists:
 * **`Blacklist`**: A list of IPs set to `DROP` globally.
 * **`Bypass_Auth`**: Devices like printers or servers that don't need to go through a login portal.
 
----
 
-Would you like me to provide a **MikroTik script** that automatically detects port scanners and adds them to a **Dynamic Address List** for you to include in your repo?
+
+
