@@ -41,11 +41,15 @@ In this scenario, the firewall is configured to refuse the packet and send an ex
 ### Configuration
 
 * **Action**: `reject`
+* <img width="346" height="196" alt="image" src="https://github.com/user-attachments/assets/cc3b0d25-0783-4890-929d-4d1c3571814c" />
+
 * **Reject With**: `icmp-host-unreachable`
 
 ### Result
 
 * **Observed Behavior**: The sender immediately receives a `Reply from 192.168.0.15: Destination host unreachable`.
+* <img width="667" height="83" alt="image" src="https://github.com/user-attachments/assets/c78e78eb-3f3f-4a0e-96b3-ffef58cf7ff8" />
+
 * **Analysis**: Unlike DROP, REJECT provides instant feedback. This is useful for internal troubleshooting as it confirms the router is active but explicitly denying the request.
 
 ---
@@ -57,5 +61,3 @@ In this scenario, the firewall is configured to refuse the packet and send an ex
 | **Sender Experience** | `Request timed out` | `Destination host unreachable` |
 | **Response Time** | High (waits for timeout) | Instant |
 | **Visibility** | Stealthy (silent) | Informative |
-
-Would you like me to help you draft the **Conclusion** or **Best Practices** section for your repo to explain when to use each?
