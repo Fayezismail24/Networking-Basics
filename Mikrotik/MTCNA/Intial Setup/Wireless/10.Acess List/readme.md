@@ -1,33 +1,6 @@
 
 # 📖 The MikroTik MTCNA Handbook: Wireless & Firewall
 
-### 📑 Table of Contents
-
-* **[Chapter 1: The Wireless Access List](https://www.google.com/search?q=%23ch1)**
-* [1.1 Core Functions](https://www.google.com/search?q=%23ch1-1)
-* [1.2 Key Configuration Fields](https://www.google.com/search?q=%23ch1-2)
-* [1.3 Access List vs. Connect List](https://www.google.com/search?q=%23ch1-3)
-* [1.4 Default Authenticate Setting](https://www.google.com/search?q=%23ch1-4)
-
-
-* **[Chapter 2: Time-Based Access Control](https://www.google.com/search?q=%23ch2)**
-* [2.1 The Time & Duration Fields](https://www.google.com/search?q=%23ch2-1)
-* [2.2 Days of the Week Selection](https://www.google.com/search?q=%23ch2-2)
-* [2.3 Case Study: Work Hours Only](https://www.google.com/search?q=%23ch2-3)
-
-
-* **[Chapter 3: Firewall Logic & Flow](https://www.google.com/search?q=%23ch3)**
-* [3.1 Top-to-Bottom Processing](https://www.google.com/search?q=%23ch3-1)
-* [3.2 The Match & Ignore Cycle](https://www.google.com/search?q=%23ch3-2)
-* [3.3 Example: The Homework Filter](https://www.google.com/search?q=%23ch3-3)
-
-
-* **[Chapter 4: Implementation Strategies](https://www.google.com/search?q=%23ch4)**
-* [4.1 Weekend Blocking (Simple vs. Strict)](https://www.google.com/search?q=%23ch4-1)
-* [4.2 Terminal/CLI Configuration](https://www.google.com/search?q=%23ch4-2)
-* [4.3 The Importance of the System Clock](https://www.google.com/search?q=%23ch4-3)
-
-
 
 ---
 
