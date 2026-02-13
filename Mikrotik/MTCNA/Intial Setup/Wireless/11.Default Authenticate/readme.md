@@ -27,4 +27,7 @@ If you uncheck **Default Authenticate**, your Wi-Fi becomes a "closed club." Eve
 * **The "Connect List":** This logic applies to the **Access List** (when the MikroTik is an Access Point). If your MikroTik is a **Station** (client), the same logic applies to the **Connect List** (determining which APs your device is allowed to join).
 * **Signal Strength Filtering:** You can use the Access List to reject clients whose signal is too weak (e.g., lower than  dBm), forcing them to roam to a closer Access Point.
 
-**Would you like me to show you the specific terminal commands to set up a MAC-address whitelist using this logic?**
+<img width="880" height="746" alt="image" src="https://github.com/user-attachments/assets/0d6885ed-a221-4258-8793-57e6aecb8370" />
+
+
+
