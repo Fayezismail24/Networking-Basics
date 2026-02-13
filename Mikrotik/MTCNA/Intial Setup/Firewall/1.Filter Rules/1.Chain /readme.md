@@ -1,4 +1,4 @@
-Thinking about firewall chains (especially in systems like MikroTik or Linux `iptables`) is a bit like being a security guard at a gated building. To understand these rules, you just have to track **where the data packet is headed.**
+Thinking about firewall chains  is a bit like being a security guard at a gated building. To understand these rules, you just have to track **where the data packet is headed.**
 
 Here is the breakdown of those three specific chains and how they function.
 
