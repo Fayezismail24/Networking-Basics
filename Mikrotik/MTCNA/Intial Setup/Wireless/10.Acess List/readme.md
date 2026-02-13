@@ -58,14 +58,102 @@ In your Wireless Interface settings, there is a checkbox called **Default Authen
 | **Client Tx Limit**       | Limits the maximum transmission power (Tx) for client devices.                                 |
 | **AP Tx Limit**           | Limits the maximum transmission power (Tx) for the AP.                                         |
 
-Time Field:
+Here is the formatted Markdown version for your GitHub repository or documentation. This structure aligns with the **MikroTik RouterOS** firewall and access rule logic often found in MTCNA training.
 
-Time: Specifies the start time for the access rule. This can be set in hours and minutes (e.g., 00:00:00 for midnight).
+---
 
-Duration: Defines the duration of the time period for the rule, such as 1d 00:00:00 for one day.
+## 🕒 Time Configuration for Access Rules
 
-Days Selection:
+In MikroTik RouterOS, you can restrict access based on specific schedules using the **Time** attributes within a rule. This is commonly used for parental controls, office hours, or scheduled maintenance.
 
-Below the time field, you can check the days of the week (e.g., Mon, Tue, Wed, Thu, Fri, Sat, Sun) that you want the rule to apply to.
+### 1. Time Field
 
-For example, you can set a rule to only allow access from Monday to Friday during a specified time period.
+* **Time:** Specifies the exact **start time** for the access rule to become active.
+* *Format:* `HH:MM:SS`
+* *Example:* `00:00:00` (Midnight) or `09:00:00` (9:00 AM).
+
+
+* **Duration:** Defines how long the rule remains active once the start time is reached.
+* *Format:* `Dd HH:MM:SS`
+* *Example:* `1d 00:00:00` means the rule stays active for a full 24-hour cycle.
+
+
+
+### 2. Days Selection
+
+Directly below the time fields, you can toggle specific days of the week to apply the rule.
+
+| Weekday | Description |
+| --- | --- |
+| **Mon - Fri** | Standard work week scheduling. |
+| **Sat - Sun** | Weekend-only restrictions or special access. |
+
+---
+
+### 💡 Example: Work Hours Only Access
+
+To create a rule that only allows internet access during a standard Monday to Friday work week (9:00 AM to 5:00 PM), you would configure the parameters as follows:
+
+* **Time:** `09:00:00`
+* **Duration:** `08:00:00`
+* **Days:** Checked: `mon, tue, wed, thu, fri` | Unchecked: `sat, sun`
+
+> **Note:** If a rule's time parameters are not met, the router will ignore that specific rule and move to the next one in the list.
+
+
+
+
+In MikroTik RouterOS (and networking in general), the **"Next Rule"** logic is the most important concept to master for the MTCNA. It refers to the **Top-to-Bottom processing** of a list.
+
+Here is the breakdown of that last line for your documentation:
+
+---
+
+### 🚦 Understanding "Top-to-Bottom" Logic
+
+When a packet of data enters the router, it doesn't look at all your rules at once. Instead, it starts at **Rule #0** and works its way down.
+
+#### 1. The Match Phase
+
+For every rule in the list, the router asks: *"Does this packet match the conditions (IP, Port, Protocol, and **Time**)?"*
+
+* If the current time is **Saturday** and your rule is set for **Mon-Fri**, the router says **"No Match."**
+
+#### 2. The "Ignore" Action
+
+If the rule doesn't match (because of the time restriction), the router simply **ignores** that rule. It doesn't stop or block the packet yet; it just moves to the next rule in the sequence.
+
+#### 3. The Fallthrough
+
+The packet "falls through" to the next line. If you have no other rules, the packet will eventually hit the **Default Action** (which is usually to "Accept" in the Forward chain unless you’ve created a "Drop All" rule at the very bottom).
+
+---
+
+### 📝 Example Scenario: "The Homework Filter"
+
+Imagine you have these three rules in order:
+
+1. **Rule 0 (Drop):** Block YouTube | **Time:** 08:00–15:00 | **Days:** Mon–Fri
+2. **Rule 1 (Accept):** Allow All Traffic
+
+**If it is Monday at 10:00 AM:**
+
+* The packet hits Rule 0. It matches the time and day.
+* **Result:** The packet is **Dropped**. The router stops looking at any more rules.
+
+**If it is Saturday at 10:00 AM:**
+
+* The packet hits Rule 0. It **does NOT match** the days.
+* **Result:** The router **ignores** Rule 0 and moves to Rule 1.
+* Rule 1 matches everything.
+* **Result:** The packet is **Accepted**.
+
+---
+
+### ⚠️ Common MTCNA Mistake
+
+Students often forget that if they want to block something during a specific time, they **must** have a rule below it that allows traffic during other times, or they must understand the "Default Policy."
+
+> **Rule of Thumb:** If a rule is "Time Sensitive," it is only "Alive" during those hours. When those hours end, that rule effectively disappears from the list until the next day.
+
+**Would you like me to show you how to use the "Extra" tab in WinBox to see exactly when a rule is active or inactive?**
