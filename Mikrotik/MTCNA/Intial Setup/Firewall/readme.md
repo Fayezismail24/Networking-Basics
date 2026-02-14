@@ -60,7 +60,9 @@ Connection Tracking is what allows the router to:
 
 Without it, Twice NAT simply cannot function.
 
--
+---
+
+By Defualt its Enabled
 
 
 
