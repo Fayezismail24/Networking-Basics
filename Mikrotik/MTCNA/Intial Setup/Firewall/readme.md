@@ -26,7 +26,43 @@
 
 ---
 
-### Why this matters
+### ⚠️ Note: Connection Tracking Requirements
 
-Using these states allows you to create a very efficient "Fast Path" for your network. By accepting **Established** and **Related** traffic at the top of your rule list, the router doesn't have to check every single packet against every single rule—it just checks its memory, sees it's a known conversation, and lets it through.
+Connection Tracking must be **enabled** to use NAT (Network Address Translation).
+
+If Connection Tracking is **OFF**, then **no NAT will happen**.
+
+The router requires the state table to rewrite packet headers and manage the "buffer" between overlapping networks.
+
+---
+
+### Why Is This Required?
+
+In the **Src-NAT example** we discussed earlier, the router changes:
+
+172.16.1.10 → 192.168.1.10
+
+The router must **remember** this translation.
+
+Without Connection Tracking:
+
+- The router forgets the translation immediately.
+- The return traffic (reply packet) will not know which internal IP to go back to.
+- The connection will time out or be dropped as **Invalid**.
+
+---
+
+Connection Tracking is what allows the router to:
+
+- Track active sessions
+- Reverse NAT translations automatically
+- Maintain proper two-way communication
+
+Without it, Twice NAT simply cannot function.
+
+-
+
+
+
+
 
