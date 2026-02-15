@@ -1,4 +1,4 @@
-In MikroTik’s WinBox, a **Simple Queue** is used to manage bandwidth for specific users or devices. The configuration in your image shows a hard speed limit applied to a single IP address.
+In MikroTik’s WinBox, a **Simple Queue** is used to manage bandwidth for specific users or devices , subnet  The configuration in the image below  image shows a hard speed limit applied to a single IP address.
 
 ---
 
