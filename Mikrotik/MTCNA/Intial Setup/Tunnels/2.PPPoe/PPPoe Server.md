@@ -13,10 +13,14 @@ This guide walks you through the steps to set up a **PPPoE server** on a MikroTi
 ## 3. Create a PPPoE Server
 - In the **PPP** section, click on **PPPoE Servers** (or **PPPoE Servers** tab).
 - Click the **"+"** button to add a new PPPoE server.
+<img width="1178" height="774" alt="image" src="https://github.com/user-attachments/assets/e16839cd-2fcc-454a-97d2-4a4d115f76a0" />
+
 
 ## 4. Configure PPPoE Server Settings
 - **Interface**:  
   - Select the **interface** that will handle the PPPoE connections (typically connected to your LAN or gateway).
+  - <img width="528" height="283" alt="image" src="https://github.com/user-attachments/assets/d52e8af1-50f0-4698-9057-692718db414f" />
+
 - **Service Name**:  
   - **Optional**: If required, enter a **service name** for the PPPoE service (e.g., `internet-service`).
 - **AC Name** (Access Concentrator Name):  
@@ -31,6 +35,8 @@ This guide walks you through the steps to set up a **PPPoE server** on a MikroTi
   - **Password**: Enter the **password** for the client.
   - **Service**: Select the **PPPoE service** this user will connect to.
   - **Profile**: Choose a **profile** (you can use the default profile or create a custom one in **PPP > Profiles**).
+<img width="565" height="603" alt="image" src="https://github.com/user-attachments/assets/ab69db9a-e381-433f-8f36-8653eba8e9aa" />
+
 
 ## 6. Assign IP Pool (Optional but Recommended)
 - Go to **IP > Pool** and create a new IP address pool that will be assigned to PPPoE clients.
