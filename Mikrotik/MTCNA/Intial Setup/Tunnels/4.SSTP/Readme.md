@@ -48,4 +48,5 @@ For the **MTCNA (MikroTik Certified Network Associate) exam**, you should know t
 #### **Remember**:
 
 * **SSTP** is ideal for environments where **firewall traversal** and **strong security** are required, but it is not as widely supported across all platforms as other VPN protocols like **OpenVPN**.
+* SSTP is available on Windows Vista as in SP1 and later version
 
