@@ -14,4 +14,4 @@ When configuring the PPP Profile in the next step, these addresses serve two dis
 
 > **Note**: The Local Address does not necessarily have to be a pool; it can be a single static IP (the Gateway). Only the Remote Address strictly requires a pool if you have multiple users connecting simultaneously.
 
-<img width="438" height="278" alt="image" src="https://github.com/user-attachments/assets/f2ecc11f-71b3-4dc8-8db3-f586aa241607" />
+<img width="438" height="260" alt="image" src="https://github.com/user-attachments/assets/cafabc36-6e17-4d73-a792-70b6da15c4db" />
