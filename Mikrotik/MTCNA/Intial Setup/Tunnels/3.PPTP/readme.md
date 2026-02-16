@@ -28,6 +28,6 @@
 
 Exam  Note :
 PPTP USES port : 
-1723 TCP 
-47 IP Protocol
+1723 TCP  > Control Channel 
+47 IP Protocol > Transmit Data server to Client 
 NAT Helper used to help PPTP in NAT'D area 
