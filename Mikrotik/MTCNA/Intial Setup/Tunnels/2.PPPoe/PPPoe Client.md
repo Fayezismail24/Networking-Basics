@@ -88,10 +88,7 @@ Here’s an example of how you would configure the PPPoE client via the MikroTik
 
 These steps ensure that the PPPoE client can successfully connect to the ISP and allow the router to route internet traffic.
 
-Let me know if you need more details or clarification!
+---
+<img width="1170" height="704" alt="image" src="https://github.com/user-attachments/assets/2088ccaf-8e7a-4617-b4c8-30e9db40dd29" />
 
-```
-
-This Markdown format provides a detailed, easy-to-follow guide on configuring the **PPPoE client** on your MikroTik router. Let me know if you need any further help!
-```
 
