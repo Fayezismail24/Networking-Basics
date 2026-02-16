@@ -29,4 +29,3 @@
 ## PPPoE in RouterOS:
 - **RouterOS**, developed by MikroTik, supports PPPoE configurations, allowing administrators to create PPPoE servers and manage client connections.
 - It also supports **PPPoE client functionality**, enabling devices to connect to PPPoE-based ISPs and configure settings like authentication, encryption, and IP assignment.
-```
