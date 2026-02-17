@@ -1,6 +1,5 @@
 
 
-````md
 # MikroTik Basic WAN + LAN Setup (Bridge, DHCP, DNS)
 
 This guide explains a **clean and correct MikroTik setup** with:
