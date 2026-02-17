@@ -11,7 +11,21 @@
 | **Monitoring** | Simple SNMP and local logging. | **The Dude** (Network monitoring server), Kid Control. |
 | **Management** | Winbox, WebFig (WWW), SSH, and Telnet. | API and specialized Web management tools. |
 
-### **Key Takeaways for MTCNA Candidates**
 
-* **The "Bundle":** In modern RouterOS versions (v7+), most "Advanced" features are now integrated into the main `routeros` bundle, but some (like **The Dude** or **User Manager**) still require separate `.npk` file installations depending on your hardware architecture.
-* **Winbox vs. WWW:** These aren't just "services"; they are part of the System packages that allow you to interact with the router.
+
+| **Package Name**    | **Type**       | **Contents / Key Features**                                                                 |
+|---------------------|----------------|--------------------------------------------------------------------------------------------|
+| system              | Default        | Core functions: Bridging, IP, Firewall, NAT, Bandwidth-test, Neighbors.                    |
+| advanced-tools      | Extra          | Includes Ip-scan, Netwatch, Wake-on-LAN, and SMS tool.                                     |
+| dhcp                | Default        | All DHCP server and client capabilities.                                                   |
+| ppp                 | Default        | Tunneling protocols: PPPoE, PPTP, L2TP, SSTP, and OVPN.                                  |
+| routing             | Default        | Dynamic routing protocols like OSPF, BGP, and RIP.                                         |
+| wireless            | Default        | Support for 802.11 wireless interfaces and CAPsMAN.                                         |
+| user-manager        | Extra          | RADIUS server for Hotspot, PPP, and Wireless authentication.                              |
+| dude                | Extra          | The Dude network monitoring server and visualization tool.                                |
+| gps                 | Extra          | Support for GPS device data and location tracking.                                        |
+| lte                 | Extra/Default  | Support for cellular modems and LTE interfaces.                                            |
+| ups                 | Extra          | Monitoring and control for Uninterruptible Power Supplies via USB/Serial.                  |
+| iot                 | Extra          | Support for LoRa, Bluetooth, and IoT-specific protocols (ROS v7).                          |
+| container           | Extra          | Allows running Docker-style containers on supported hardware (ROS v7).                     |
+
