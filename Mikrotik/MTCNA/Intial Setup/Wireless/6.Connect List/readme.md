@@ -91,14 +91,14 @@ This top-down approach is perfect for **Failover/Backup** scenarios:
 
 By putting the preferred connection at the top (Rule 0), you ensure the MikroTik always tries the "best" option first before settling for the backup.
 
----
-
-### Pro-Tip for your `-70..120` Rule
-
-Since you have two identical rules in your image (both for `wlan1` with the same signal range), the router will always try to satisfy **Rule 0** first. If Rule 0 and Rule 1 point to the same SSID, Rule 1 acts as a redundant check.
-
-> **Important:** If you want Rule 1 to be a "fallback" with a weaker signal, you might set Rule 0 to `-70..120` and Rule 1 to `-85..120`. This tells the router: "Try for a great signal first; if you can't find one, I'll accept a weaker one."
+### MTCNA Question
 
 
+The 'connect-list' of wireless interfaces is used
+A.   for preventing communications between the clients
+B.   for specifying APs not to connect to
+C.   for configuring SSID on the interface 
+D.  specifying APs to connect to
 
+Answer b c d 
 
