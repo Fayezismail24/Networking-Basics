@@ -11,7 +11,8 @@
 * Other side: **Station Bridge**
 * Often uses **WDS** or **4-address mode**
  ### Note 
-* ❌ Always Disbale the DCHP SERVER 
+* ❌ Always Disbale the DCHP SERVER
+* ❌ No NAT Rule is Needed here 
 
 ### Use case
 
