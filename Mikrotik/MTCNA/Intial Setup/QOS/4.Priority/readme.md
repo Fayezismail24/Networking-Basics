@@ -91,19 +91,4 @@ Priority only controls borrowing order when congestion happens.
 
 ---
 
-## 🔹 Scenario Question
 
-Queue A → priority 1  
-Queue B → priority 8  
-
-Both have:
-- limit-at = 0  
-- max-limit = 5 Mbps  
-
-Parent queue:
-- max-limit = 5 Mbps  
-
-If both queues start heavy downloads at the same time:
-
-Who gets more bandwidth, and why?
-```
