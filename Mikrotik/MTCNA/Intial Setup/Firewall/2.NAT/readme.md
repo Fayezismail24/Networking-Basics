@@ -1,12 +1,12 @@
-SRC NAT REDIRECT
 
 
-SRC NAT MASQ
+Privat to public srcnat : private ip > src-nat > public ip
 
 
-SRC NAT PRIVATE PUBLIC 
+Masq src   : srcnat > interface > masquerade >  
 
+Server DST : dstnat > GW > dst-nat > Server  Private  IP 
 
-DST DSTNAT IP PORT 
+Redirect   : srcnat > redirect >  port
 
 
