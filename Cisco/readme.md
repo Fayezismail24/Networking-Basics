@@ -1,9 +1,5 @@
 
 ```
-ccna-200-301/
-│
-├── README.md                          
-│
 ├── 01-Network-Fundamentals/
 │   ├── OSI-Model.md
 │   ├── TCPIP-Model.md                
