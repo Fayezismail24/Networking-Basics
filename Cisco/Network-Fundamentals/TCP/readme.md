@@ -1,20 +1,21 @@
 # TCP/IP Model — Complete Study Notes
 
 
-
 ## 📌 What is the TCP/IP Model?
 
-The TCP/IP model is the **real-world framework** used by the internet and modern networks. It has **4 layers** (compared to OSI's 7). Every packet you send — whether it's a YouTube video, a Discord message, or a ping — follows this model.
+The TCP/IP model is the **real-world framework** used by the internet and modern networks. It has **5 layers** (compared to OSI's 7). Every packet you send — whether it's a YouTube video, a Discord message, or a ping — follows this model.
 
 ```
 ┌─────────────────────────────────┐
-│       APPLICATION LAYER         │  ← Layer 4
+│       APPLICATION LAYER         │  ← Layer 5
 ├─────────────────────────────────┤
-│       TRANSPORT LAYER           │  ← Layer 3  (TCP & UDP live here)
+│       TRANSPORT LAYER           │  ← Layer 4  (TCP & UDP live here)
 ├─────────────────────────────────┤
-│       INTERNET LAYER            │  ← Layer 2  (IP lives here)
+│       INTERNET LAYER            │  ← Layer 3  (IP lives here)
 ├─────────────────────────────────┤
-│     NETWORK ACCESS LAYER        │  ← Layer 1  (Ethernet, Wi-Fi)
+│       DATA LINK LAYER           │  ← Layer 2  (MAC, Frames, Switch)
+├─────────────────────────────────┤
+│       PHYSICAL LAYER            │  ← Layer 1  (Cables, Bits, NIC)
 └─────────────────────────────────┘
 ```
 
@@ -23,15 +24,15 @@ The TCP/IP model is the **real-world framework** used by the internet and modern
 ## 🔁 TCP/IP vs OSI Mapping
 
 ```
-OSI Model (7 Layers)          TCP/IP Model (4 Layers)
+OSI Model (7 Layers)          TCP/IP Model (5 Layers)
 ─────────────────────         ────────────────────────
 7. Application   ──┐
-6. Presentation  ──┼────────► 4. Application
+6. Presentation  ──┼────────► 5. Application
 5. Session       ──┘
-4. Transport     ──────────► 3. Transport
-3. Network       ──────────► 2. Internet
-2. Data Link     ──┐
-1. Physical      ──┴────────► 1. Network Access
+4. Transport     ──────────► 4. Transport
+3. Network       ──────────► 3. Internet
+2. Data Link     ──────────► 2. Data Link
+1. Physical      ──────────► 1. Physical
 ```
 
 > 💡 **Exam Tip:** OSI is used for **troubleshooting and theory**. TCP/IP is used in **real implementation**.
@@ -40,23 +41,44 @@ OSI Model (7 Layers)          TCP/IP Model (4 Layers)
 
 ## 🧱 Each Layer Explained
 
-### Layer 1 — Network Access (Physical + Data Link)
-Handles how data moves **physically** between devices on the same network.
+### Layer 1 — Physical Layer
+Handles the **raw transmission of bits** over a physical medium. No addressing, just electricity, light, or radio waves.
 
 | Component | Role |
 |---|---|
-| Ethernet | Wired LAN communication |
-| Wi-Fi (802.11) | Wireless LAN communication |
-| MAC Address | Hardware address for local delivery |
-| Switch | Forwards frames based on MAC |
-| NIC | Network Interface Card |
+| Cables (Copper/Fiber) | Physical medium for signal transmission |
+| Wi-Fi Radio (802.11) | Wireless signal transmission |
+| Hubs / Repeaters | Amplify/repeat signals (Layer 1 only) |
+| NIC (Physical part) | Converts bits to electrical/optical signals |
+| Clocking & Encoding | Defines how bits are represented on wire |
+
+**PDU:** Bits (1s and 0s)  
+**Address Used:** None
+
+---
+
+### Layer 2 — Data Link Layer
+Handles **node-to-node delivery** on the same network. Responsible for framing, MAC addressing, and error detection on the local link.
+
+| Component | Role |
+|---|---|
+| Ethernet (802.3) | Wired LAN framing standard |
+| Wi-Fi (802.11) | Wireless LAN framing standard |
+| MAC Address | Hardware address for local frame delivery |
+| Switch / Bridge  | Forwards frames based on MAC address table |
+| NIC (Logical part) | Builds and reads Ethernet frames |
+| ARP | Resolves IP address → MAC address |
 
 **PDU:** Frame  
 **Address Used:** MAC Address
 
+> 💡 **Key Point:** The Data Link layer is split into two sublayers:
+> - **LLC (Logical Link Control)** — interfaces with the Network layer above
+> - **MAC (Media Access Control)** — controls access to the physical medium
+
 ---
 
-### Layer 2 — Internet Layer (Network)
+### Layer 3 — Internet Layer (Network)
 Handles **logical addressing** and **routing** between networks.
 
 | Component | Role |
@@ -71,7 +93,7 @@ Handles **logical addressing** and **routing** between networks.
 
 ---
 
-### Layer 3 — Transport Layer ⭐
+### Layer 4 — Transport Layer ⭐
 Handles **end-to-end communication**. This is where **TCP and UDP** operate.
 
 **PDU:** Segment (TCP) / Datagram (UDP)  
@@ -79,7 +101,7 @@ Handles **end-to-end communication**. This is where **TCP and UDP** operate.
 
 ---
 
-### Layer 4 — Application Layer
+### Layer 5 — Application Layer
 Where user-facing protocols live.
 
 | Protocol | Port | Uses |
@@ -262,13 +284,13 @@ Client                          Server
 ```
 Application Layer → Data
         ↓
-Transport Layer   → Segment (TCP Header + Data)
+Transport Layer   → Segment  (TCP/UDP Header + Data)
         ↓
-Internet Layer    → Packet  (IP Header + Segment)
+Internet Layer    → Packet   (IP Header + Segment)
         ↓
-Network Access    → Frame   (Ethernet Header + Packet + FCS)
+Data Link Layer   → Frame    (Ethernet Header + Packet + FCS)
         ↓
-Physical          → Bits (1s and 0s on the wire)
+Physical Layer    → Bits     (1s and 0s on the wire)
 ```
 
 **De-encapsulation** happens in reverse on the receiving end.
@@ -320,7 +342,9 @@ netstat -an
 
 ## 🔑 Key Takeaways
 
-- TCP/IP has **4 layers** — Application, Transport, Internet, Network Access
+- TCP/IP has **5 layers** — Application, Transport, Internet, Data Link, Physical
+- **Data Link** handles MAC addressing and framing (Switch layer)
+- **Physical** handles raw bit transmission (cables, signals, NIC hardware)
 - **TCP** = reliable, ordered, connection-oriented (HTTP, SSH, FTP)
 - **UDP** = fast, connectionless, best-effort (DNS, VoIP, streaming)
 - The **3-way handshake** is SYN → SYN-ACK → ACK
