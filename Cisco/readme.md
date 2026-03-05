@@ -1,47 +1,45 @@
 
 ```
 ├── 01-Network-Fundamentals/
-│   ├── OSI-Model.md
-│   ├── TCPIP-Model.md                
-│   ├── IPv4-Addressing.md
-│   ├── Subnetting.md
+│   ├── OSI-Model
+│   ├── TCPIP-Model
+│   ├── IPv4-Addressing
+│   ├── Subnetting
 │   └── labs/
 │       └── packet-tracer-files/
 │
 ├── 02-Network-Access/
-│   ├── Ethernet-Switching.md
-│   ├── VLANs.md
-│   ├── STP.md
+│   ├── Ethernet-Switching
+│   ├── VLANs
+│   ├── STP
 │   └── labs/
 │
 ├── 03-IP-Connectivity/
-│   ├── Routing-Fundamentals.md
-│   ├── Static-Routes.md
-│   ├── OSPF.md
+│   ├── Routing-Fundamentals
+│   ├── Static-Routes
+│   ├── OSPF
 │   └── labs/
 │
 ├── 04-IP-Services/
-│   ├── DHCP.md
-│   ├── NAT.md
-│   ├── NTP.md
-│   ├── QoS.md
+│   ├── DHCP
+│   ├── NAT
+│   ├── NTP
+│   ├── QoS
 │   └── labs/
 │
 ├── 05-Security-Fundamentals/
-│   ├── ACLs.md
-│   ├── Device-Hardening.md
-│   ├── VPNs.md
+│   ├── ACLs
+│   ├── Device-Hardening
+│   ├── VPNs
 │   └── labs/
 │
 ├── 06-Automation-Programmability/
-│   ├── REST-APIs.md
-│   ├── Ansible-Basics.md
-│   ├── JSON-XML-YAML.md
+│   ├── REST-APIs
+│   ├── Ansible-Basics
+│   ├── JSON-XML-YAML
 │   └── labs/
 │
 └── exam-prep/
-    ├── quick-reference.md             ← ports, protocols cheat sheet
-    ├── practice-questions.md
-    └── subnetting-cheatsheet.md
-```
-
+    ├── quick-reference             ← ports, protocols cheat sheet
+    ├── practice-questions
+    └── subnetting-cheatsheet
