@@ -136,7 +136,3 @@ The device still holds the inform URL and credentials of a previous controller.
 - **HTTPS Inform (port 8443)** is used when the controller has a valid SSL certificate. For self-hosted controllers without a cert, stick to **HTTP port 8080**.
 - After adoption, the device will automatically keep checking in with the controller and receive any configuration pushes.
 - Devices can be **forgotten** (un-adopted) from the controller UI — this does not factory reset the device, but it will return to "Pending Adoption" if still reachable.
-
----
-
-*Part of the UniFi Documentation series — see [1. The Brain](../1.The-Brain/1.The-Brain.md) for an overview of the UniFi ecosystem.*
