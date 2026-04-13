@@ -77,5 +77,4 @@ under a specific Controller instance.
 | Raspberry Pi | Low-power always-on |
 | UniFi Cloud Key | Dedicated plug-and-play hardware |
 | UniFi Dream Machine | All-in-one (controller built-in) |
-```
 
