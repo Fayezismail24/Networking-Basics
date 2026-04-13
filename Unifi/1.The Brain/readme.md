@@ -1,5 +1,5 @@
 
-# 1. The Brain — UniFi Network Application
+The Brain — UniFi Network Application
 
 ## What is the UniFi Ecosystem?
 
