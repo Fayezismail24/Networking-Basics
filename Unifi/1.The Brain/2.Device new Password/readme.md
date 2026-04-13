@@ -56,3 +56,10 @@ If the SSH password was set by someone else or you've forgotten it:
 - SSH access is typically only needed for **manual `set-inform`**, troubleshooting, or advanced configuration.
 - Under normal operation, all configuration is pushed by the controller — direct SSH is not required.
 - If you use **SSH keys** instead of a password, they are configured in the same `Device SSH Settings` section.
+
+---
+
+<img width="1907" height="852" alt="1" src="https://github.com/user-attachments/assets/f0e64eda-43a2-435d-b2ee-46348610898a" />
+<img width="1907" height="912" alt="2" src="https://github.com/user-attachments/assets/295cf915-2bf7-45b6-845b-75c8a4d437b1" />
+<img width="1912" height="920" alt="3" src="https://github.com/user-attachments/assets/702e44cc-2aa8-4082-af0b-a412919e356a" />
+
