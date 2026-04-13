@@ -79,6 +79,3 @@ under a specific Controller instance.
 | UniFi Dream Machine | All-in-one (controller built-in) |
 ```
 
----
-
-Want me to adjust the tone, add more detail anywhere, or move on to the next section?
