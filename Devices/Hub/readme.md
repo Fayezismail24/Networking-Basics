@@ -1,7 +1,5 @@
 
 
-## 📌 Overview
-
 A **network hub** is a basic networking device used to connect multiple computers in a network. It operates at **Layer 1 (Physical Layer)** of the OSI model.
 
 Unlike modern devices, a hub does not filter or manage traffic—it simply broadcasts incoming data to all connected devices.
