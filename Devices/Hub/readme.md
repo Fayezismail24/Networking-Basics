@@ -65,3 +65,21 @@ When a device sends data to the hub:
 * Poor performance
 * No traffic management
 * Not used in modern networks
+
+
+
+In a hub-based network:
+
+- All connected devices share **one single collision domain**  
+- If two devices transmit simultaneously, a **collision occurs**  
+- Devices must resend data, causing delays  
+
+> Because hubs broadcast data to all ports, they **do not separate collision domains**
+
+### Example
+
+If PC1 and PC2 send data at the same time:
+
+- Their signals collide inside the hub  
+- The data becomes corrupted  
+- Both PCs must retransmit  
