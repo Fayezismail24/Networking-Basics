@@ -366,6 +366,7 @@ Bits: 10101100 11010011 01001101 ...
 | **EtherType** | 2 bytes | Identifies Layer 3 protocol | `0x0800` = IPv4, `0x86DD` = IPv6 |
 | **Payload** | 46–1500 bytes | IP Packet (Layer 3 + above) | [IP Packet] |
 | **Frame Check Sequence (FCS)** | 4 bytes | Error detection (CRC) | Calculated checksum |
+https://en.wikipedia.org/wiki/EtherType
 
 ### Real Example — Ethernet Frame:
 
