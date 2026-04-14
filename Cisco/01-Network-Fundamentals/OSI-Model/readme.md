@@ -6,7 +6,7 @@ The OSI (Open Systems Interconnection) model is a **conceptual framework** used 
 ┌─────────────────────────────────┐
 │       APPLICATION LAYER         │  ← Layer 7  (HTTP, FTP, DNS, DHCP)
 ├─────────────────────────────────┤
-│       PRESENTATION LAYER        │  ← Layer 6  (Encryption, Compression)
+│       PRESENTATION LAYER        │  ← Layer 6  (Encryption(TLS/SSL), Compression)
 ├─────────────────────────────────┤
 │       SESSION LAYER             │  ← Layer 5  (Sessions, NetBIOS)
 ├─────────────────────────────────┤
