@@ -1,6 +1,5 @@
-When you initially connect to a device, you are in user EXEC mode
+When you initially connect to a device via the Console Port , you are in user EXEC mode
 
-This mode is secured using the console
 
 To secure user EXEC mode access, enter line console configuration mode using the line console 0 global configuration command, as shown in the example
 
