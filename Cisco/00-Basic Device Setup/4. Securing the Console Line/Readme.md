@@ -1,4 +1,10 @@
-The **console line** is the physical serial port used to directly manage the device.
+When you initially connect to a device, you are in user EXEC mode
+
+This mode is secured using the console
+
+To secure user EXEC mode access, enter line console configuration mode using the line console 0 global configuration command, as shown in the example
+
+The zero is used to represent the first (and in most cases the only) console interface. Next, specify the user EXEC mode password using the password password command. Finally, enable user EXEC access using the login command
 
 ```bash
 R1(config)# line console 0
