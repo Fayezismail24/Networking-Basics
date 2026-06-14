@@ -1,5 +1,12 @@
 
 ```
+├── 00-Device-Configuration/
+│   ├── Accessing-the-CLI
+│   ├── CLI-Modes
+│   ├── Hostnames
+│   ├── Securing-the-Console-Line
+│   └── Securing-Privileged-EXEC-Enable-Mode
+│
 ├── 01-Network-Fundamentals/
 │   ├── OSI-Model
 │   ├── TCPIP-Model
