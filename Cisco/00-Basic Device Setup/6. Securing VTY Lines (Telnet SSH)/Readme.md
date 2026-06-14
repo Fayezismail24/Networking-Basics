@@ -36,3 +36,6 @@ R1(config)# ip ssh version 2
 ```
 
 ---
+
+
+https://www.youtube.com/watch?v=BdP1h-trq_Y
