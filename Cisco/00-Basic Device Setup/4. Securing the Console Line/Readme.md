@@ -21,3 +21,7 @@ R1(config-line)# exit
 | `login` | Enables password checking on login |
 | `exec-timeout <min> <sec>` | Auto-logout timer (0 0 = never) |
 | `logging synchronous` | Keeps CLI clean from syslog interruptions |
+
+
+
+<img width="467" height="462" alt="Screenshot 2026-06-14 154144" src="https://github.com/user-attachments/assets/0f922d73-38ca-432f-b558-e1d33148844a" />
