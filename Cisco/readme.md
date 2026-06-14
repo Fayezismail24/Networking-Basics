@@ -5,7 +5,16 @@
 │   ├── CLI-Modes
 │   ├── Hostnames
 │   ├── Securing-the-Console-Line
-│   └── Securing-Privileged-EXEC-Enable-Mode
+│   └── Securing-Privileged-EXEC(Enable-Mode)
+│   ├── Securing VTY Lines (Telnet / SSH)
+│   ├──Encrypting All Plaintext Passwords
+│   ├── Banner Messages
+│   ├── Interface Configuration
+│   └──Saving the Configuration
+│   └──Verifying the Configuration
+│   └──Full Configuration Example
+│   └──Quick Reference Cheat Sheet
+
 │
 ├── 01-Network-Fundamentals/
 │   ├── OSI-Model
