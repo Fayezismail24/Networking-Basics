@@ -1,201 +1,51 @@
-# Data Link Layer (OSI Layer 2)
+Boss, **CSMA/CD** absolutely belongs in a Data Link Layer repository because it's a Layer 2 media access method.
 
-## Overview
+You can add a section like this:
 
-The **Data Link Layer** is Layer 2 of the OSI model. It is responsible for node-to-node communication, framing, physical addressing, error detection, and controlling access to the transmission medium.
+## CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
 
-The Data Link Layer receives packets from the Network Layer and encapsulates them into frames for transmission over the Physical Layer.
+CSMA/CD is a media access control method used in **half-duplex Ethernet networks** to manage how devices share a common transmission medium.
 
----
+### How CSMA/CD Works
 
-## Functions of the Data Link Layer
+1. **Carrier Sense**: A device listens to the network before transmitting.
+2. **Multiple Access**: Multiple devices can use the same network medium.
+3. **Collision Detection**: If two devices transmit simultaneously, a collision occurs.
+4. **Jam Signal**: The devices send a jam signal to notify others of the collision.
+5. **Backoff**: Each device waits a random amount of time before attempting to retransmit.
 
-### Framing
+### Example
 
-Encapsulates Network Layer packets into frames for transmission.
+```text
+PC A ----- Hub ----- PC B
 
-### Physical Addressing
-
-Uses **MAC (Media Access Control) addresses** to identify devices on a local network.
-
-### Error Detection
-
-Detects transmission errors using mechanisms such as the **Frame Check Sequence (FCS)**.
-
-### Media Access Control
-
-Determines how devices share and access the network medium.
-
-### Flow Control
-
-Helps regulate data transmission between devices.
-
----
-
-## Data Link Layer Sub-Layers
-
-### LLC (Logical Link Control)
-
-* Communicates with the Network Layer
-* Identifies Network Layer protocols
-* Defined by IEEE 802.2
-
-### MAC (Media Access Control)
-
-* Controls access to the physical medium
-* Handles MAC addressing
-* Defined by IEEE 802 standards
-
-```text id="nccu1q"
-+-----------------------+
-| Logical Link Control  |
-+-----------------------+
-| Media Access Control  |
-+-----------------------+
+PC A transmits
+PC B transmits at the same time
+↓
+Collision occurs
+↓
+Both devices stop and retry later
 ```
 
----
+### Where is CSMA/CD Used?
 
-## Frame Structure
+* Legacy Ethernet hubs
+* Half-duplex Ethernet networks
 
-A Layer 2 frame typically contains:
+### Where is CSMA/CD NOT Used?
 
-```text id="wsq9gl"
-+---------+---------+------+------+
-| Dest MAC| Src MAC | Data | FCS  |
-+---------+---------+------+------+
-```
+* Modern switched Ethernet networks
+* Full-duplex Ethernet connections
 
-### Frame Fields
+In modern Ethernet, switches provide dedicated collision domains, eliminating collisions and making CSMA/CD unnecessary.
 
-| Field           | Purpose                     |
-| --------------- | --------------------------- |
-| Destination MAC | Receiver's MAC address      |
-| Source MAC      | Sender's MAC address        |
-| Data            | Encapsulated Layer 3 packet |
-| FCS             | Error detection field       |
+### CSMA/CD vs CSMA/CA
 
----
+| Feature            | CSMA/CD                  | CSMA/CA               |
+| ------------------ | ------------------------ | --------------------- |
+| Full Name          | Collision Detection      | Collision Avoidance   |
+| Used In            | Ethernet (legacy)        | Wi-Fi                 |
+| Handles Collisions | Detects after they occur | Tries to prevent them |
+| Common Today       | Rare                     | Very common           |
 
-## MAC Addresses
-
-A MAC address is a unique 48-bit hardware address assigned to a network interface.
-
-Example:
-
-```text id="hyq77n"
-00:1A:2B:3C:4D:5E
-```
-
-### MAC Address Structure
-
-```text id="4c0b0o"
-00:1A:2B | 3C:4D:5E
-   OUI   | Device ID
-```
-
-* **OUI (Organizationally Unique Identifier)**: Manufacturer identifier
-* **Device ID**: Unique identifier assigned by the manufacturer
-
----
-
-## Switching
-
-Switches operate primarily at Layer 2.
-
-### Switch Functions
-
-* Learn MAC addresses
-* Build a MAC address table
-* Forward frames
-* Filter frames
-* Flood unknown unicast traffic
-
----
-
-## VLANs (Virtual LANs)
-
-VLANs logically separate devices into different broadcast domains.
-
-### Benefits
-
-* Improved security
-* Reduced broadcasts
-* Better network management
-* Increased scalability
-
-Example:
-
-```text id="mrm9nk"
-VLAN 10 → HR Department
-VLAN 20 → IT Department
-VLAN 30 → Finance Department
-```
-
----
-
-## Layer 2 Protocols
-
-* Ethernet (IEEE 802.3)
-* Wi-Fi (IEEE 802.11)
-* PPP (Point-to-Point Protocol)
-* HDLC (High-Level Data Link Control)
-
----
-
-## Common CCNA Topics
-
-### ARP (Address Resolution Protocol)
-
-Maps IPv4 addresses to MAC addresses.
-
-### STP (Spanning Tree Protocol)
-
-Prevents Layer 2 loops in switched networks.
-
-### EtherChannel
-
-Combines multiple physical links into a single logical connection.
-
-### VLAN Trunking
-
-Allows multiple VLANs to traverse a single link using IEEE 802.1Q tagging.
-
----
-
-## Troubleshooting Commands
-
-### Cisco IOS
-
-```bash
-show mac address-table
-show interfaces
-show interfaces status
-show vlan brief
-show spanning-tree
-show etherchannel summary
-```
-
----
-
-## Common Layer 2 Issues
-
-* Duplex mismatch
-* VLAN misconfiguration
-* MAC address table problems
-* Layer 2 loops
-* STP blocking ports
-* Faulty cables or transceivers
-
----
-
-## Key Takeaway
-
-The Data Link Layer provides reliable local network communication by using frames, MAC addresses, switching, VLANs, and error detection mechanisms. It serves as the bridge between the Physical Layer and the Network Layer in the OSI model.
-
-## References
-
-* Cisco CCNA 200-301 Official Cert Guide
-* IEEE 802 Standards
-* Cisco Networking Academy
-* RFC 826 (ARP)
+**CCNA exam tip:** Know that **CSMA/CD is associated with old hub-based Ethernet networks**, while **Wi-Fi uses CSMA/CA** because wireless devices cannot reliably detect collisions while transmitting.
