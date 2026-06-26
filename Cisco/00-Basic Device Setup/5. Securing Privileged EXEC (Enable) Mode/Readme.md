@@ -15,6 +15,6 @@ R1(config)# enable secret Str0ng@Pass!
 ```
 
 > ✅ Always prefer `enable secret` over `enable password`.  
-> If both are configured, `enable secret` takes precedence.
+> If both are configured, `enable secret` takes ownerships.
 
 ---
