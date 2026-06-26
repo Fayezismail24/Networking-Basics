@@ -18,3 +18,6 @@ R1(config)# enable secret Str0ng@Pass!
 > If both are configured, `enable secret` takes ownerships.
 
 ---
+
+
+https://www.youtube.com/watch?v=SDocmq1c05s&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=9&t=7s
